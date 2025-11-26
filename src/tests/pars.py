@@ -1,7 +1,6 @@
 from requests import Session
 from bs4 import BeautifulSoup
-import config as c
-from servises import type_of_batton
+from config import config as c
 
 data={'username':c.name,"password":c.password}
 

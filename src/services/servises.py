@@ -1,7 +1,6 @@
-from requests import Session
 from bs4 import BeautifulSoup
-from Radio_solv import solv_radio
-from Radio_solv import solv_checkbox
+from src.services.Radio_solv import solv_radio
+from src.services.Radio_solv import solv_checkbox
 
 def type_of_batton(soup:BeautifulSoup):
     a = soup.find("div", class_="r0").find_all("input")

@@ -1,6 +1,5 @@
-import requests
 from bs4 import BeautifulSoup
-from Ai_f import solve_question
+from src.services.Ai_f import solve_question
 
 def solv_radio(soup: BeautifulSoup):
     question = soup.find("div", class_="qtext").text.strip()

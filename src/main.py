@@ -1,7 +1,7 @@
 from requests import Session
 from bs4 import BeautifulSoup
-import config as c
-from servises import type_of_batton
+import config.config as c
+from src.services.servises import type_of_batton
 from dotenv import load_dotenv
 import os
 
