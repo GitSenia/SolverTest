@@ -1,21 +1,28 @@
 from requests import Session
 from bs4 import BeautifulSoup
-import config.config as c
-from src.services.servises import type_of_batton
 from dotenv import load_dotenv
 import os
 
+import config.config as c
+from src.services.servises import type_of_batton
+from src.services.url_create import get_attempt
+from src.services.count_questions import count_questions
+
+
 load_dotenv()
 
-def submit_test(session: Session, url_test: str, pages: int):
+def submit_test(session: Session, id:int ):
     """
     Автоматическое прохождение теста.
     session: requests.Session с авторизацией
     url_test: URL страницы теста
     pages: количество страниц теста
     """
+    url_d=get_attempt(session,id)
+    pages = count_questions(url_d.get("attempt_url"),session)
+
     for i in range(pages):
-        response = session.get(f"{url_test}&page={i}")
+        response = session.get(f"https://lms.bsuir.by/mod/quiz/attempt.php?attempt={url_d.get("attempt_id")}&cmid={id}&page={i}")
         soup = BeautifulSoup(response.text, "lxml")
 
         # Получаем правильные ответы (число или список чисел)
@@ -74,8 +81,8 @@ def submit_test(session: Session, url_test: str, pages: int):
         print(f"Страница {i} отправлена, статус: {response_post.status_code}")
 
 
-# === Использование ===
+
 if __name__ == "__main__":
     session = Session()
     session.post(c.url_login, data={'username': os.getenv("STUDENT_NUMBER"), 'password': os.getenv("PASSWORD")}, allow_redirects=True)
-    submit_test(session, c.url_test, pages=2)
+    submit_test(session,c.mid)
