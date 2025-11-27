@@ -27,6 +27,10 @@ def submit_test(session: Session, id:int ):
 
         # Получаем правильные ответы (число или список чисел)
         correct_answers = type_of_batton(soup)
+        if correct_answers is None:
+            print(f"[Страница {i}] Вопрос с картинкой или пустой, пропускаем")
+            continue
+
 
 
         post_data = {}
@@ -85,4 +89,4 @@ def submit_test(session: Session, id:int ):
 if __name__ == "__main__":
     session = Session()
     session.post(c.url_login, data={'username': os.getenv("STUDENT_NUMBER"), 'password': os.getenv("PASSWORD")}, allow_redirects=True)
-    submit_test(session,c.id_APEC)
+    submit_test(session,c.mid)
