@@ -1,88 +1,52 @@
-from requests import Session
 from bs4 import BeautifulSoup
+import requests
+from urllib.parse import urljoin
+import config.config as c
 from dotenv import load_dotenv
 import os
-
-import config.config as c
-from src.services.servises import type_of_batton
-from src.services.url_create import get_attempt
-from src.services.count_questions import count_questions
-
-
 load_dotenv()
 
-def submit_test(session: Session, id:int ):
-    """
-    Автоматическое прохождение теста.
-    session: requests.Session с авторизацией
-    url_test: URL страницы теста
-    pages: количество страниц теста
-    """
-    url_d=get_attempt(session,id)
-    pages = count_questions(url_d.get("attempt_url"),session)
 
-    for i in range(pages):
-        response = session.get(f"https://lms.bsuir.by/mod/quiz/attempt.php?attempt={url_d.get("attempt_id")}&cmid={id}&page={i}")
-        soup = BeautifulSoup(response.text, "lxml")
+def fetch_preflight_form(session, cmid: int):
+    quiz_view_url = f"https://lms.bsuir.by/mod/quiz/view.php?id={cmid}"
 
-        # Получаем правильные ответы (число или список чисел)
-        correct_answers = type_of_batton(soup)
+    # 1. GET страница теста
+    resp = session.get(quiz_view_url)
+    print("[1/2] GET страница теста, статус:", resp.status_code)
 
+    soup = BeautifulSoup(resp.text, "lxml")
 
-        post_data = {}
+    # 2. Находим кнопку для начала попытки
+    btn = soup.find("button", string=lambda x: x and ("тест" in x.lower() or "попыт" in x.lower()))
+    if not btn:
+        raise Exception("Не найдена кнопка 'Пройти тест' или 'Продолжить попытку'!")
 
-        # Берём все input'ы на странице
-        for input_tag in soup.find_all("input"):
-            name = input_tag.get("name")
-            if not name:
-                continue
+    form = btn.find_parent("form")
+    action = form["action"]
+    payload = {inp.get("name"): inp.get("value") for inp in form.find_all("input") if inp.get("name")}
 
-            # Радио — одно число
-            if name.endswith("_answer") and input_tag.get("type") == "radio":
-                if isinstance(correct_answers, list):
-                    post_data[name] = str(correct_answers[0])
-                else:
-                    post_data[name] = str(correct_answers)
+    # 3. POST первый шаг
+    r = session.post(action, data=payload, allow_redirects=False)
+    print("[2/2] POST первый шаг, статус:", r.status_code)
 
-            # Чекбоксы — несколько вариантов
-            elif "_choice" in name:
-                index = int(name.split("choice")[-1])
-                post_data[name] = 1 if isinstance(correct_answers, list) and index in correct_answers else 0
+    # 4. Получаем HTML формы preflight
+    soup2 = BeautifulSoup(r.text, "lxml")
+    preflight_form = soup2.find("form", id="mod_quiz_preflight_form")
+    if not preflight_form:
+        raise Exception("Форма preflight не найдена после первого POST!")
 
-            # Флажки и sequencecheck
-            elif name.endswith("_:flagged") or name.endswith("_:sequencecheck"):
-                post_data[name] = input_tag.get("value", "")
+    # 5. Вернем HTML формы и payload
+    inputs = {inp.get("name"): inp.get("value") for inp in preflight_form.find_all("input") if inp.get("name")}
+    form_html = str(preflight_form)
 
-        # Обязательные поля Moodle
-        for field in ["attempt", "sesskey", "thispage", "nextpage", "slots"]:
-            tag = soup.find("input", {"name": field})
-            if tag:
-                post_data[field] = tag.get("value", "")
-
-        post_data["timeup"] = 0
-        post_data["mdlscrollto"] = ""
-
-        # === Исправленный блок для кнопки "next" ===
-        next_btn = soup.find("button", {"type": "submit"})
-        if next_btn:
-            post_data["next"] = next_btn.get_text(strip=True)
-        else:
-            next_input = soup.find("input", {"type": "submit"})
-            if next_input:
-                post_data["next"] = next_input.get("value", "Следующая страница")
-            else:
-                post_data["next"] = "Следующая страница"
-
-        # URL для отправки
-        url_post = soup.find("form").get("action")
-
-        # Отправка POST
-        response_post = session.post(url_post, data=post_data)
-        print(f"Страница {i} отправлена, статус: {response_post.status_code}")
+    return inputs, form_html
 
 
-
+# Пример использования:
 if __name__ == "__main__":
-    session = Session()
-    session.post(c.url_login, data={'username': os.getenv("STUDENT_NUMBER"), 'password': os.getenv("PASSWORD")}, allow_redirects=True)
-    submit_test(session,c.mid)
+    session = requests.Session()
+    session.post(c.url_login, data={'username': os.getenv("STUDENT_NUMBER"), 'password': os.getenv("PASSWORD")},allow_redirects=True)
+    cmid = 305095  # замените на ваш cmid
+    inputs, form_html = fetch_preflight_form(session, cmid)
+    print("Inputs preflight:", inputs)
+    print("HTML формы preflight (первые 1000 символов):\n", form_html[:1000])
