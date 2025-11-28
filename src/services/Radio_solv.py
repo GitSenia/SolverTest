@@ -1,54 +1,87 @@
 from bs4 import BeautifulSoup
 from src.services.Ai_f import solve_question
 
-def solv_radio(soup: BeautifulSoup):
-    qtext_div = soup.find("div", class_="qtext")
-    print(qtext_div)
-    if not qtext_div or not qtext_div.text.strip():
-        print("Вопрос содержит только изображение, пропускаем")
-        return None  # или любое другое обозначение пропуска
+from bs4 import BeautifulSoup
+from src.services.Ai_f import solve_question
 
-    question = qtext_div.text.strip()
-    answer = [a.text for a in soup.find_all("label", class_="ms-1")]
-    print(question, answer)
-
-    while True:
-        ar_1 = solve_question(question, answer)
-        if not ar_1:
-            continue
-
-        if ar_1[0].isdigit():
-            num = int(ar_1.split(".")[0]) - 1
-            print(num)
-            return num
-
-
-def solv_checkbox(soup: BeautifulSoup):
+def solv_radio(soup: BeautifulSoup, max_attempts=10):
+    """
+    Решает вопросы с одним выбором (radio).
+    Если вопрос только с изображением или без текста — возвращает None.
+    """
     qtext_div = soup.find("div", class_="qtext")
     if not qtext_div or not qtext_div.text.strip():
-        print("Вопрос содержит только изображение, пропускаем")
+        print("Вопрос содержит только изображение или текст отсутствует, пропускаем")
         return None
 
     question = qtext_div.text.strip()
-    answer = [a.text for a in soup.find_all("div", class_="flex-fill")]
-    print(question, answer)
+    answers = [a.text.strip() for a in soup.find_all("label", class_=" ms-1") if a.text.strip()]
+    print(question)
+    print(answers)
 
-    while True:
-        ar_1 = solve_question(question, answer)
-        if not ar_1:
+
+    if not answers:
+        print("Варианты ответа не найдены, пропускаем")
+        return None
+
+    print(f"Вопрос (radio): {question}")
+    print(f"Варианты ответа: {answers}")
+
+    for attempt in range(1, max_attempts + 1):
+        print(f"Попытка {attempt}")
+        result = solve_question(question, answers)
+        if not result or not result.strip():
+            continue
+
+        if result[0].isdigit():
+            num = int(result.split(".")[0]) - 1
+            print(f"Выбран ответ: {num}")
+            return num
+
+    print("Не удалось определить правильный ответ после нескольких попыток")
+    return None
+
+
+def solv_checkbox(soup: BeautifulSoup, max_attempts=10):
+    """
+    Решает вопросы с множественным выбором (checkbox).
+    Если вопрос только с изображением или без текста — возвращает None.
+    """
+    qtext_div = soup.find("div", class_="qtext")
+    if not qtext_div or not qtext_div.text.strip():
+        print("Вопрос содержит только изображение или текст отсутствует, пропускаем")
+        return None
+
+    question = qtext_div.text.strip()
+    answers = [a.text.strip() for a in soup.find_all("div", class_="flex-fill") if a.text.strip()]
+    print(question)
+    print(answers)
+    if not answers:
+        print("Варианты ответа не найдены, пропускаем")
+        return None
+
+    print(f"Вопрос (checkbox): {question}")
+    print(f"Варианты ответа: {answers}")
+
+    for attempt in range(1, max_attempts + 1):
+        print(f"Попытка {attempt}")
+        result = solve_question(question, answers)
+        if not result or not result.strip():
             continue
 
         numbers = []
-        for x in ar_1.split(","):
-            x = x.strip()
-            if x and x[0].isdigit():
-                num = int(x.split(".")[0]) - 1
-                numbers.append(num)
+        # Разделяем ответ через запятую и пробел, безопасно обрабатываем
+        parts = [p.strip() for p in result.replace(",", " ").split()]
+        for x in parts:
+            if x.isdigit():
+                numbers.append(int(x) - 1)
 
         if numbers:
-            print(numbers)
+            print(f"Выбраны ответы: {numbers}")
             return numbers
 
+    print("Не удалось определить правильные ответы после нескольких попыток")
+    return None
 
 
 #

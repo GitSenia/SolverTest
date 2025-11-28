@@ -12,5 +12,8 @@ def type_of_batton(soup:BeautifulSoup):
         return  solv_radio(soup)
     if 'checkbox' in a_type:
         return solv_checkbox(soup)
+    else:
+        print("пока не продуман такой тип заполнения вопросов")
+        return None
 
 
