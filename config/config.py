@@ -1,3 +1,19 @@
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+TOKEN_BOT = os.getenv('TOKEN_BOT')
+
+HOST=os.getenv('HOST')
+
+PORT=os.getenv('PORT')
+
+DATABASE=os.getenv('DATABASE')
+
+
+USER=os.getenv('USER')
+
+PASSWORD=os.getenv('PASSWORD')
 
 
 url_test='https://lms.bsuir.by/mod/quiz/attempt.php?attempt=589701&cmid=324848'
