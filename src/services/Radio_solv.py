@@ -1,5 +1,3 @@
-from bs4 import BeautifulSoup
-from src.services.Ai_f import solve_question
 
 from bs4 import BeautifulSoup
 from src.services.Ai_f import solve_question
@@ -19,6 +17,13 @@ def solv_radio(soup: BeautifulSoup, max_attempts=10):
         for div in soup.find_all("div", class_="flex-fill")
         if div.text.strip()
     ]
+    if not answers:
+        answers = [
+            div.text.strip()
+            for div in soup.find_all("label", class_="ms-1")
+            if div.text.strip()
+        ]
+
 
     print(question)
     print(answers)
