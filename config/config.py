@@ -8,7 +8,7 @@ HOST=os.getenv('HOST')
 
 PORT=os.getenv('PORT')
 
-DATABASE=os.getenv('DATABASE')
+DATABASE=os.getenv('DBNAME')
 
 
 USER=os.getenv('USER')
