@@ -1,22 +1,23 @@
-import psycopg2
+import asyncpg
+import asyncio
 import config.config as c
 
-def insert_user(user_name:str,password:str,tg_id:int):
-    conn = psycopg2.connect(host=c.HOST, user=c.USER, password=c.PASSWORD, dbname=c.DATABASE ,port=c.PORT)
-    cur = conn.cursor()
-    cur.execute("INSERT into users (username,password_user,id_tg) values(%s,%s,%s);", (user_name,password,tg_id))
-    conn.commit()
-    cur.close()
-    conn.close()
-
-def user_info(id_tg:int):
-    conn = psycopg2.connect(host=c.HOST, user=c.USER, password=c.PASSWORD, dbname=c.DATABASE ,port=c.PORT)
-    cur = conn.cursor()
-    cur.execute("Select username,password_user from users where id_tg=%s and payment is TRUE",(id_tg,))
-    rows = cur.fetchall()
-    cur.close()
-    conn.close()
-    return rows[0]
+async def insert_user(user_name:str,password:str,tg_id:int,tg_name:str):
+    conn = await asyncpg.connect(host=c.HOST, user=c.USER, password=c.PASSWORD, database=c.DATABASE ,port=c.PORT)
+    await conn.execute("INSERT INTO users (username, password_user, id_tg,tg_name) VALUES ($1, $2, $3,$4);",user_name,password,tg_id,tg_name)
+    await conn.close()
 
 
-# print(user_info(945376146)[0])
+async def user_info(id_tg:int):
+    conn = await asyncpg.connect(host=c.HOST, user=c.USER, password=c.PASSWORD, database=c.DATABASE ,port=c.PORT)
+    row= await conn.fetchrow("Select username,password_user,tg_name from users where id_tg=$1 and payment is TRUE",id_tg)
+    await conn.close()
+    return row
+
+
+# async def main():
+#     info = await user_info(1243262357)
+#     print(info[0])
+#
+# import asyncio
+# asyncio.run(main())

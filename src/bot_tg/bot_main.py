@@ -82,7 +82,7 @@ def callback_id(call):
         test_id = int(match.group(1))
         # Получаем пользователя
         info_user = user_info(call.from_user.id)
-        bot.send_message(call.message.chat.id, f"Решаю тест {test_id}")
+        bot.send_message(call.message.chat.id, f"Решаю тест....")
         submit_test(test_id, info_user[0], info_user[1])
         bot.send_message(call.message.chat.id, "Тест решён")
 
@@ -104,7 +104,7 @@ def callback(call: types.CallbackQuery):
     markup3.add(btn3)#омо
 
     markup4 = types.InlineKeyboardMarkup(row_width=2)
-    btn4 = types.InlineKeyboardButton("начать решать", callback_data="305095")
+    btn4 = types.InlineKeyboardButton("начать решать", callback_data="id305095")
     markup4.add(btn4)#Апэц
 
     if call.data=="option1":
