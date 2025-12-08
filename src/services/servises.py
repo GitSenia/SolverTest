@@ -1,11 +1,22 @@
 from bs4 import BeautifulSoup
 from src.services.Radio_solv import solv_radio
 from src.services.Radio_solv import solv_checkbox
+from src.services.Radio_solv import solv_text
 
 def type_of_batton(soup:BeautifulSoup):
-    a = soup.find("div", class_="r0").find_all("input")
+
+
+    if soup.find("input", {"type": "text"}):
+        return solv_text(soup)
+
+    a = soup.find("div", class_="r0")
+    if a is None:
+        print("данный тип вопросов не поддержтвается")
+        return None
+
+    a_2=a.find_all("input")
     a_type= []
-    for b in a:
+    for b in a_2:
         a_type.append(b.get("type"))
 
     if 'radio' in a_type:

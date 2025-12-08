@@ -1,6 +1,6 @@
 
 from bs4 import BeautifulSoup
-from src.services.Ai_f import solve_question
+from src.services.Ai_f import solve_question,solve_question_text
 
 def solv_radio(soup: BeautifulSoup, max_attempts=10):
 
@@ -88,6 +88,27 @@ def solv_checkbox(soup: BeautifulSoup, max_attempts=10):
 
     print("Не удалось определить ответы")
     return None
+
+
+def solv_text(soup: BeautifulSoup, max_attempts=5):
+    qtext_div = soup.find("div", class_="qtext")
+    if not qtext_div or not qtext_div.text.strip():
+        print("Вопрос с текстовым ответом пустой, пропускаем")
+        return None
+
+    question = qtext_div.text.strip()
+    print(question)
+
+
+    answer = solve_question_text(question)
+    print(question)
+    print(answer)
+
+    # Возвращаем словарь {name: value}, чтобы потом подставлять в POST
+
+    return answer
+
+
 
 
 

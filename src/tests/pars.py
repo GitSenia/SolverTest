@@ -29,34 +29,37 @@ def submit_test(id:int,user_name:str,password:str):
 
         # Получаем правильные ответы (число или список чисел)
         correct_answers = type_of_batton(soup)
-        # if correct_answers is None:
-        #     print(f"[Страница {i}] Вопрос с картинкой или пустой, пропускаем")
-        #     continue
+        if correct_answers is None:
+            print(f"[Страница {i}] Вопрос с картинкой или пустой, пропускаем")
+            continue
 
 
 
         post_data = {}
 
-        # Берём все input'ы на странице
         for input_tag in soup.find_all("input"):
             name = input_tag.get("name")
             if not name:
                 continue
 
-            # Радио — одно число
-            if name.endswith("_answer") and input_tag.get("type") == "radio":
+            inp_type = input_tag.get("type")
+
+            if inp_type == "radio" and name.endswith("_answer"):
                 if isinstance(correct_answers, list):
                     post_data[name] = str(correct_answers[0])
                 else:
                     post_data[name] = str(correct_answers)
 
-            # Чекбоксы — несколько вариантов
             elif "_choice" in name:
                 index = int(name.split("choice")[-1])
                 post_data[name] = 1 if isinstance(correct_answers, list) and index in correct_answers else 0
 
-            # Флажки и sequencecheck
-            elif name.endswith("_:flagged") or name.endswith("_:sequencecheck"):
+            elif inp_type == "text":
+                # вот здесь заполняем текстовые ответы
+                post_data[name] = correct_answers
+
+
+            elif name.endswith("_:sequencecheck"):
                 post_data[name] = input_tag.get("value", "")
 
         # Обязательные поля Moodle
@@ -89,4 +92,4 @@ def submit_test(id:int,user_name:str,password:str):
 
 
 if __name__ == "__main__":
-    submit_test(c.mid,os.getenv("STUDENT_NUMBER"),os.getenv("PASSWORD"))
+    submit_test(c.id_APEC,os.getenv("STUDENT_NUMBER"),os.getenv("PASSWORD"))
