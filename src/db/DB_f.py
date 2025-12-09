@@ -14,6 +14,12 @@ async def user_info(id_tg:int):
     await conn.close()
     return row
 
+async def update_info(username:str):
+    conn = await asyncpg.connect(host=c.HOST, user=c.USER, password=c.PASSWORD, database=c.DATABASE ,port=c.PORT)
+    await conn.execute("update users set payment = TRUE where username=$1;",username)
+    await conn.close()
+
+
 
 # async def main():
 #     info = await user_info(1243262357)

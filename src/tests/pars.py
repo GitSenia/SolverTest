@@ -11,7 +11,7 @@ from src.services.count_questions import count_questions
 
 load_dotenv()
 
-def submit_test(id:int,user_name:str,password:str):
+def submit_test(id:int, user_name:str, password:str):
     session = Session()
     session.post(c.url_login, data={'username': user_name, 'password': password}, allow_redirects=True)
     """

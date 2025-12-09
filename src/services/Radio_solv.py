@@ -35,6 +35,7 @@ def solv_radio(soup: BeautifulSoup, max_attempts=10):
     for attempt in range(1, max_attempts + 1):
         print(f"Попытка {attempt}")
         result = solve_question(question, answers)
+        print(result)
         if not result:
             continue
 
@@ -71,6 +72,7 @@ def solv_checkbox(soup: BeautifulSoup, max_attempts=10):
         return None
 
     for attempt in range(1, max_attempts + 1):
+        print(f"Попытка {attempt}")
         result = solve_question(question, answers)
         if not result:
             continue
@@ -104,7 +106,7 @@ def solv_text(soup: BeautifulSoup, max_attempts=5):
     print(question)
     print(answer)
 
-    # Возвращаем словарь {name: value}, чтобы потом подставлять в POST
+
 
     return answer
 

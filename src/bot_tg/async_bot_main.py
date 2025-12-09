@@ -11,8 +11,8 @@ import re
 
 from config import config as c
 from src.tests.pars import submit_test
-from src.db.DB_f import user_info,insert_user
-
+from src.db.DB_f import user_info,insert_user,update_info
+ADMIN_IDS = [945376146, 5778651984]
 bot=Bot(c.TOKEN_BOT)
 
 dp=Dispatcher()
@@ -21,10 +21,19 @@ class Form(StatesGroup):
     user_name=State()
     password=State()
 
+class Test(StatesGroup):
+    id_test=State()
+    start=State()
+
+class Admin(StatesGroup):
+    username=State()
+
+
 
 @dp.message(Command("start"))
 async def registration(message: Message):
     await bot.send_message(message.chat.id,"Привет!")
+
 
 
 @dp.message(Command("registration"))
@@ -58,6 +67,49 @@ async def test(message: Message):
     btn4 = InlineKeyboardButton(text="Апэц", callback_data="option4")
     markup = InlineKeyboardMarkup(inline_keyboard=[[btn1,btn2,btn3,btn4]])
     await bot.send_message(message.chat.id,text="Выберете тест",reply_markup=markup)
+
+
+@dp.message(Command("testid"))
+async def test_id(message: Message,state: FSMContext):
+    await bot.send_message(message.chat.id,text="Введите id теста")
+    await state.set_state(Test.id_test)
+
+@dp.message(Command("admin"))
+async def admin(message: Message,state: FSMContext):
+    await bot.send_message(message.chat.id, text="Введите пользователя")
+    await state.set_state(Admin.username)
+
+
+
+@dp.message(Admin.username)
+async def get_username(message: Message, state: FSMContext):
+    if message.from_user.id not in ADMIN_IDS:
+        await bot.send_message(message.chat.id, text="У вас нет прав доступа")
+    else:
+        try:
+            await update_info(message.text)
+            await bot.send_message(message.chat.id, text="пользователь обнавлён")
+        except Exception as e:
+            await bot.send_message(message.chat.id, text=f"какая-то ошибка{e}")
+
+
+
+    await state.clear()
+
+
+
+
+
+@dp.message(Test.id_test)
+async def id_test(message: Message, state: FSMContext):
+    await state.update_data(id_test=message.text)
+    data = await state.get_data()
+    btn2 = InlineKeyboardButton(text="начать решать", callback_data=f"id{data['id_test']}")
+    markup = InlineKeyboardMarkup(inline_keyboard=[[btn2]])
+    await bot.send_message(message.chat.id,text=f"Номер теста {data['id_test']}",reply_markup=markup)
+    await state.clear()
+
+
 
 
 @dp.callback_query(F.data.regexp(r"option"))
@@ -101,13 +153,16 @@ async def solve(call: CallbackQuery):
     test_id = int(match.group(1))
 
     info_user= await user_info(call.from_user.id)
-    await bot.send_message(call.message.chat.id,text="Начинаю решать...")
-    try:
-        await asyncio.to_thread(submit_test,test_id,info_user[0],info_user[1])
-        await bot.send_message(call.message.chat.id, text="тест решён...")
-    except Exception as e:
-        print(f"Ошибка при решении теста: {e} у user:{info_user[2]} ")
-        await bot.send_message(call.message.chat.id, text="ошибка при решении теста")
+    if info_user is None:
+        await bot.send_message(call.message.chat.id,text="Пользователь не зарегистрирован или не оплачено")
+    else:
+        await bot.send_message(call.message.chat.id,text="Начинаю решать...")
+        try:
+            await asyncio.to_thread(submit_test,test_id,info_user[0],info_user[1])
+            await bot.send_message(call.message.chat.id, text="тест решён...")
+        except Exception as e:
+            print(f"Ошибка при решении теста: {e} у user:{info_user[2]} ")
+            await bot.send_message(call.message.chat.id, text="ошибка при решении теста")
 
 
 

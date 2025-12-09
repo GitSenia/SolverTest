@@ -22,10 +22,10 @@ def solve_question(question: str, answers: list[str]) -> str:
         prompt += f"{i}. {ans}\n"
 
     completion = client.chat.completions.create(
-        model="openai/gpt-oss-20b",
+        model="openai/gpt-oss-120b",
         messages=[{"role": "user", "content": prompt}],
         temperature=0,           # точный ответ
-        max_completion_tokens=256,
+        max_completion_tokens=1024,
         top_p=1,
         reasoning_effort="medium",
         stream=False,            # выключаем стрим — нам нужен результат сразу
@@ -45,10 +45,10 @@ def solve_question_text(question: str) -> str:
 
 
     completion = client.chat.completions.create(
-        model="openai/gpt-oss-20b",
+        model="openai/gpt-oss-120b",
         messages=[{"role": "user", "content": prompt}],
         temperature=0,           # точный ответ
-        max_completion_tokens=1000,
+        max_completion_tokens=1500,
         top_p=1,
         # reasoning_effort="medium",
         stream=False,            # выключаем стрим — нам нужен результат сразу
