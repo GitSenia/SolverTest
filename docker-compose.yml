@@ -1,12 +1,13 @@
 services:
   test_solver:
     build: .
-    image: test_solver:1.0.0
+    image: shilovars/test_solver:1.0.0
     container_name: test_solver_app
     depends_on:
       - db
     environment:
       DATABASE_URL: postgres://postgres:postgres@db:5432/test_solver_db
+      PYTHONPATH: /app
       API_KEY: ${API_KEY}
       TOKEN_BOT: ${TOKEN_BOT}
       HOST: ${HOST}
@@ -18,7 +19,7 @@ services:
 
   db:
     image: postgres:17.4-alpine
-    container_name: postgres_db
+    container_name: test_solver_db
 
     environment:
       POSTGRES_USER: djan-capcan
