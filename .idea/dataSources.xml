@@ -8,11 +8,11 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/solv_test</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="postgres@docker" uuid="dec44c19-3830-4ca7-85d3-107957ac122d">
+    <data-source source="LOCAL" name="postgres@docer" uuid="f24ab7e0-064f-4094-87f1-fca7609bfab4">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5433/postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5433/test_solver_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

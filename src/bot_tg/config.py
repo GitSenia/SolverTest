@@ -33,7 +33,7 @@ HOST=os.getenv('HOST')
 PORT=os.getenv('PORT')
 DATABASE=os.getenv('DBNAME')
 
-USER=os.getenv('USER')
+USER=os.getenv('USER_DB')
 PASSWORD=os.getenv('PASSWORD_DB')
 
 url_test='https://lms.bsuir.by/mod/quiz/attempt.php?attempt=589701&cmid=324848'

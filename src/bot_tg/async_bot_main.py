@@ -119,13 +119,11 @@ async def callback(call: CallbackQuery):
     btn1 = InlineKeyboardButton(text="начать решать", callback_data="id298405")
     markup1 = InlineKeyboardMarkup(inline_keyboard=[[btn1]])# субд
 
-    btn2 = InlineKeyboardButton(text="начать решать", callback_data="id321506")
-    btn2_caio = InlineKeyboardButton(text="начать решать тест 2", callback_data="id321532")
-    btn3_caio = InlineKeyboardButton(text="начать решать тест 2", callback_data="id321541")
-    markup2 = InlineKeyboardMarkup(inline_keyboard=[[btn2,btn2_caio,btn3_caio]]) #саио
+    btn2 = InlineKeyboardButton(text="начать решать", callback_data="id321554")
+    markup2 = InlineKeyboardMarkup(inline_keyboard=[[btn2]]) #саио
 
 
-    btn3 = InlineKeyboardButton(text="начать решать", callback_data="id324848")
+    btn3 = InlineKeyboardButton(text="начать решать 2", callback_data="id324848")
     markup3 = InlineKeyboardMarkup(inline_keyboard=[[btn3]]) #омо
 
     btn4 = InlineKeyboardButton(text="начать решать", callback_data="id305095")
