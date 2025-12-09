@@ -1,3 +1,5 @@
+import logging
+
 from requests import Session
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
@@ -30,7 +32,7 @@ def submit_test(id:int, user_name:str, password:str):
         # Получаем правильные ответы (число или список чисел)
         correct_answers = type_of_batton(soup)
         if correct_answers is None:
-            print(f"[Страница {i}] Вопрос с картинкой или пустой, пропускаем")
+            logging.debug(f"[Страница {i}] Вопрос с картинкой или пустой, пропускаем")
             continue
 
 
@@ -87,7 +89,7 @@ def submit_test(id:int, user_name:str, password:str):
 
         # Отправка POST
         response_post = session.post(url_post, data=post_data)
-        print(f"Страница {i} отправлена, статус: {response_post.status_code}")
+        logging.debug(f"Страница {i} отправлена, статус: {response_post.status_code}")
 
 
 

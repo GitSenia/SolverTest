@@ -1,3 +1,5 @@
+import logging
+
 from bs4 import BeautifulSoup
 from src.services.Radio_solv import solv_radio
 from src.services.Radio_solv import solv_checkbox
@@ -11,7 +13,7 @@ def type_of_batton(soup:BeautifulSoup):
 
     a = soup.find("div", class_="r0")
     if a is None:
-        print("данный тип вопросов не поддержтвается")
+        logging.debug("данный тип вопросов не поддержтвается")
         return None
 
     a_2=a.find_all("input")
@@ -24,7 +26,7 @@ def type_of_batton(soup:BeautifulSoup):
     if 'checkbox' in a_type:
         return solv_checkbox(soup)
     else:
-        print("пока не продуман такой тип заполнения вопросов")
+        logging.debug("пока не продуман такой тип заполнения вопросов")
         return None
 
 

@@ -7,6 +7,7 @@ from src.bot_tg import config as c
 from src.services.servises import type_of_batton
 from src.services.url_create import get_attempt
 from src.services.count_questions import count_questions
+import logging
 
 
 load_dotenv()
@@ -82,7 +83,7 @@ def submit_test(session: Session, id:int ):
 
         # Отправка POST
         response_post = session.post(url_post, data=post_data)
-        print(f"Страница {i} отправлена, статус: {response_post.status_code}")
+        logging.debug(f"Страница {i} отправлена, статус: {response_post.status_code}")
 
 
 

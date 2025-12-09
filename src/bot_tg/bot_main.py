@@ -1,3 +1,5 @@
+import logging
+
 import telebot
 from telebot import types
 import os
@@ -55,7 +57,7 @@ def handle_registration(message):
         bot.send_message(chat_id, f"Регистрация завершена успешно!\nИмя: {user_data['name']}\nПароль: {user_data['password']}")
 
         # Здесь можно сохранить данные в базу или файл
-        print(f"Новый пользователь: {user_data['name']}, Пароль: {user_data['password']}")
+        logging.info(f"Новый пользователь: {user_data['name']}, Пароль: {user_data['password']}")
         users.pop(chat_id)  # Убираем пользователя из словаря состояния, если не нужно хранить
 
 @bot.message_handler(commands=['test'])

@@ -1,4 +1,6 @@
 import asyncio
+import logging
+
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message,InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery
 from aiogram.filters import Command
@@ -159,7 +161,7 @@ async def solve(call: CallbackQuery):
             await asyncio.to_thread(submit_test,test_id,info_user[0],info_user[1])
             await bot.send_message(call.message.chat.id, text="тест решён...")
         except Exception as e:
-            print(f"Ошибка при решении теста: {e} у user:{info_user[2]} ")
+            logging.error(f"Ошибка при решении теста: {e} у user:{info_user[2]} ")
             await bot.send_message(call.message.chat.id, text="ошибка при решении теста")
 
 
@@ -169,7 +171,7 @@ async def solve(call: CallbackQuery):
 
 async def main():
     try:
-        print("Бот запускается...")
+        logging.info("Бот запускается...")
         await dp.start_polling(bot)
     finally:
         await bot.session.close()

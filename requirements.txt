@@ -4,3 +4,4 @@ asyncpg==0.31.0
 groq==0.35.0
 beautifulsoup4==4.12.2
 requests==2.31.0
+lxml
