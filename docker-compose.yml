@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   test_solver:
     build: .
@@ -5,6 +7,7 @@ services:
     container_name: test_solver_app
     depends_on:
       - db
+      - flyway
     environment:
       DATABASE_URL: postgres://postgres:postgres@db:5432/test_solver_db
       PYTHONPATH: /app
@@ -20,7 +23,6 @@ services:
   db:
     image: postgres:17.4-alpine
     container_name: test_solver_db
-
     environment:
       POSTGRES_USER: djan-capcan
       POSTGRES_PASSWORD: cL49I1v0EQgbX0s7Ad
@@ -36,6 +38,18 @@ services:
       retries: 5
       start_period: 10s
     restart: unless-stopped
+
+  flyway:
+    image: flyway/flyway:11.17.0
+    container_name: test_solver_migrations
+    command: -url=jdbc:postgresql://db:5432/test_solver_db -user=djan-capcan -password=cL49I1v0EQgbX0s7Ad -schemas=public -locations=filesystem:/flyway/sql migrate
+    volumes:
+      - ./migrations:/flyway/sql
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
 
 volumes:
   postgres_data:
