@@ -1,11 +1,7 @@
 from bs4 import BeautifulSoup
-import requests
 from requests import Session
-import config.config as c
-import os
 from dotenv import load_dotenv
-from urllib.parse import urlparse, parse_qs
-from src.services.url_create import get_attempt
+
 load_dotenv()
 
 def count_questions(attempt_url, session:Session):

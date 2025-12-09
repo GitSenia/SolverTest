@@ -7,9 +7,7 @@ from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 import re
 
-
-
-from config import config as c
+from src.bot_tg import config as c
 from src.tests.pars import submit_test
 from src.db.DB_f import user_info,insert_user,update_info
 ADMIN_IDS = [945376146, 5778651984]

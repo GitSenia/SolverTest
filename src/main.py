@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import os
 
-import config.config as c
+from src.bot_tg import config as c
 from src.services.servises import type_of_batton
 from src.services.url_create import get_attempt
 from src.services.count_questions import count_questions

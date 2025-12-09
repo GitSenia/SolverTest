@@ -1,6 +1,6 @@
 services:
   test_solver:
-    build: ../../AppData/Local/Temp
+    build: .
     image: test_solver:1.0.0
     container_name: test_solver_app
     depends_on:

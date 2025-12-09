@@ -1,6 +1,6 @@
 import asyncpg
-import asyncio
-import config.config as c
+from src.bot_tg import config as c
+
 
 async def insert_user(user_name:str,password:str,tg_id:int,tg_name:str):
     conn = await asyncpg.connect(host=c.HOST, user=c.USER, password=c.PASSWORD, database=c.DATABASE ,port=c.PORT)
