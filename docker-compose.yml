@@ -14,7 +14,7 @@ services:
       API_KEY: ${API_KEY}
       TOKEN_BOT: ${TOKEN_BOT}
       HOST: ${HOST}
-      USER: ${USER}
+      USER_BD: ${USER_DB}
       PASSWORD_DB: ${PASSWORD_DB}
       DBNAME: ${DBNAME}
       PORT: ${PORT}
@@ -27,8 +27,6 @@ services:
       POSTGRES_USER: djan-capcan
       POSTGRES_PASSWORD: cL49I1v0EQgbX0s7Ad
       POSTGRES_DB: test_solver_db
-#    volumes:
-#      - postgres_data:/var/lib/postgresql/data
     ports:
       - "5433:5432"
     healthcheck:

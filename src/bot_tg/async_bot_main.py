@@ -53,8 +53,11 @@ async def get_username(message: Message,state: FSMContext):
     await state.update_data(tg_id=message.from_user.id)
     await state.update_data(tg_name=message.from_user.username)
     data= await state.get_data()
-    await bot.send_message(message.chat.id, "Регистрация прошла успешно")
-    await insert_user(data['username'], data['password'],data["tg_id"],data["tg_name"])
+
+    if await insert_user(data['username'], data['password'],data["tg_id"],data["tg_name"]):
+        await bot.send_message(message.chat.id, "Регистрация прошла успешно")
+    else:
+        await bot.send_message(message.chat.id, "Вы уже зарегистрированы")
     await state.clear()
 
 
@@ -87,13 +90,12 @@ async def get_username(message: Message, state: FSMContext):
         await bot.send_message(message.chat.id, text="У вас нет прав доступа")
     else:
         try:
-            await update_info(message.text)
-            await bot.send_message(message.chat.id, text="пользователь обнавлён")
+            if await update_info(message.text):
+                await bot.send_message(message.chat.id, text="пользователь обновлён")
+            else:
+                await bot.send_message(message.chat.id, text="такого пользователя нет")
         except Exception as e:
             await bot.send_message(message.chat.id, text=f"какая-то ошибка{e}")
-
-
-
     await state.clear()
 
 
@@ -114,7 +116,6 @@ async def id_test(message: Message, state: FSMContext):
 
 @dp.callback_query(F.data.regexp(r"option"))
 async def callback(call: CallbackQuery):
-    await bot.send_message(call.from_user.id,text=call.data)
 
     btn1 = InlineKeyboardButton(text="начать решать", callback_data="id298405")
     markup1 = InlineKeyboardMarkup(inline_keyboard=[[btn1]])# субд
@@ -123,7 +124,7 @@ async def callback(call: CallbackQuery):
     markup2 = InlineKeyboardMarkup(inline_keyboard=[[btn2]]) #саио
 
 
-    btn3 = InlineKeyboardButton(text="начать решать 2", callback_data="id324848")
+    btn3 = InlineKeyboardButton(text="начать решать", callback_data="id324848")
     markup3 = InlineKeyboardMarkup(inline_keyboard=[[btn3]]) #омо
 
     btn4 = InlineKeyboardButton(text="начать решать", callback_data="id305095")
@@ -137,12 +138,6 @@ async def callback(call: CallbackQuery):
         await bot.send_message(call.message.chat.id, "ОМО:", reply_markup=markup3)
     if call.data=="option4":
         await bot.send_message(call.message.chat.id, "АПЭЦ:", reply_markup=markup4)
-
-
-
-
-
-
 
 
 @dp.callback_query(F.data.regexp(r"^id(\d+)$"))
