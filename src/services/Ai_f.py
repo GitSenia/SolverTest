@@ -2,6 +2,9 @@ from groq import Groq
 from dotenv import load_dotenv
 import os
 import re
+
+from src.services.dinamic_answer_promt import f_prompt, questions_db,find_similar_questions
+
 load_dotenv()
 
 
@@ -25,8 +28,8 @@ def solve_question(question: str, answers: list[str]) -> str:
         model="openai/gpt-oss-120b",
         messages=[{"role": "user", "content": prompt}],
         temperature=0,           # точный ответ
-        max_completion_tokens=1024,
-        top_p=1,
+        max_completion_tokens=3000,
+        top_p=0.7,
         reasoning_effort="medium",
         stream=False,            # выключаем стрим — нам нужен результат сразу
     )
@@ -49,13 +52,44 @@ def solve_question_text(question: str) -> str:
         messages=[{"role": "user", "content": prompt}],
         temperature=0,           # точный ответ
         max_completion_tokens=1500,
-        top_p=1,
+        top_p=0.7,
         # reasoning_effort="medium",
         stream=False,            # выключаем стрим — нам нужен результат сразу
     )
 
 
     return completion.choices[0].message.content.strip()
+
+def solve_question_2(question: str, answers: list[str]) -> str:
+    """
+    Возвращает номер правильного ответа через GPT-OSS с few-shot.
+    Если похожие вопросы не найдены — вызывает базовую функцию solve_question.
+    Принимает только вопрос и список ответов.
+    """
+    # ищем похожие вопросы в глобальной базе
+    similar = find_similar_questions(question, questions_db)
+
+    # если похожих вопросов нет, вызываем базовую функцию
+    if not similar:
+        return solve_question(question, answers)
+
+    # формируем промпт с few-shot
+    prompt = f_prompt(question, answers, questions_db)
+
+    completion = client.chat.completions.create(
+        model="openai/gpt-oss-120b",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.0,
+        top_p=0.6,
+        max_completion_tokens=2024,
+        reasoning_effort="medium",
+        stream=False
+    )
+
+    return completion.choices[0].message.content.strip()
+
+
+
 
 
 # def ars(c:str):

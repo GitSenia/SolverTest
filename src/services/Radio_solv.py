@@ -1,7 +1,8 @@
 import logging
 
 from bs4 import BeautifulSoup
-from src.services.Ai_f import solve_question,solve_question_text
+from src.services.Ai_f import solve_question, solve_question_text, solve_question_2
+
 
 def solv_radio(soup: BeautifulSoup, max_attempts=10):
 
@@ -34,7 +35,7 @@ def solv_radio(soup: BeautifulSoup, max_attempts=10):
 
     for attempt in range(1, max_attempts + 1):
         logging.debug(f"Попытка {attempt}")
-        result = solve_question(question, answers)
+        result = solve_question_2(question, answers)
         logging.debug(result)
         if not result:
             continue
@@ -73,7 +74,7 @@ def solv_checkbox(soup: BeautifulSoup, max_attempts=10):
 
     for attempt in range(1, max_attempts + 1):
         logging.debug(f"Попытка {attempt}")
-        result = solve_question(question, answers)
+        result = solve_question_2(question, answers)
         if not result:
             continue
 
