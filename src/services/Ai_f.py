@@ -26,7 +26,7 @@ def solve_question(question: str, answers: list[str]) -> str:
         messages=[{"role": "user", "content": prompt}],
         temperature=0,           # точный ответ
         max_completion_tokens=1024,
-        top_p=1,
+        top_p=0.7,
         reasoning_effort="medium",
         stream=False,            # выключаем стрим — нам нужен результат сразу
     )
@@ -49,7 +49,7 @@ def solve_question_text(question: str) -> str:
         messages=[{"role": "user", "content": prompt}],
         temperature=0,           # точный ответ
         max_completion_tokens=1500,
-        top_p=1,
+        top_p=0.7,
         # reasoning_effort="medium",
         stream=False,            # выключаем стрим — нам нужен результат сразу
     )

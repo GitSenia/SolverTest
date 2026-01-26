@@ -8,3 +8,15 @@
 #class="ms-1 класс с вариантом ответа (текст)
 
 #="flex-fill ms-1 класс для текста варианта ответаа чек кнопки
+
+#activity-item focus-control  предполагаемый тест
+
+
+#activity activity-wrapper quiz modtype_quiz  hasinfo предполагаемый тест
+
+# class courses frontpage-course-list-enrolled список всех курсов
+
+
+# instancename название теста
+
+
