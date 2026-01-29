@@ -17,10 +17,8 @@ import re
 load_dotenv()
 
 
-session = Session()
-str = session.post(c.url_login, data={'username': "32850203", 'password': "Shilov#Arseni5"}, allow_redirects=True)
-soup = BeautifulSoup(str.text, 'lxml')
-soup1=soup.find_all(class_=re.compile("coursebox"))
+
+
 
 
 
@@ -28,8 +26,12 @@ soup1=soup.find_all(class_=re.compile("coursebox"))
 
 
 # Пример использования
-def test_find(session: Session):
+def test_find(user_name:str, password:str):
     tests_for_curs={}
+    session = Session()
+    str = session.post(c.url_login, data={'username':user_name, 'password': password}, allow_redirects=True)
+
+    soup = BeautifulSoup(str.text, 'lxml')
     courseboxes = soup.find_all(class_=re.compile("coursebox"))
     for entry in courseboxes:
 
@@ -48,12 +50,44 @@ def test_find(session: Session):
 
         tests_for_curs[name] = curs
 
+    tests_for_curs_pars={}
+    for key, values in tests_for_curs.items():
 
-    print(tests_for_curs)
+        name_for_subject = ""
+        name_of_teacher = key.split()[-1]
+        key = key.replace("(ДН)", "").replace(name_of_teacher, "")
+
+        for i in key.split('.', 1)[0].split():
+            name_for_subject += i[0].upper()
+
+        tests_for_curs_pars[(name_for_subject,name_of_teacher)] = values
+
+
+    return tests_for_curs_pars
 
 
 
 
-test_find(session)
+
+print(test_find("32850203","Shilov#Arseni5"))
+
+
+
+
+
+# for key,values in test_find("32850203","Shilov#Arseni5").items():
+#     name_for_subject = ""
+#     name_of_teacher=key.split()[-1]
+#     key=key.replace("(ДН)","").replace(name_of_teacher,"")
+#     if key.find("."):
+#         for i in key.split('.', 1)[0].split():
+#             name_for_subject += i[0].upper()
+#     print(name_of_teacher,name_for_subject,values)
+#
+#
+
+
+
+
 
 

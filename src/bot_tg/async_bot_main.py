@@ -12,6 +12,7 @@ import re
 from src.bot_tg import config as c
 from src.tests.pars import submit_test
 from src.db.DB_f import user_info,insert_user,update_info
+from src.services.find_test import test_find
 ADMIN_IDS = [945376146, 5778651984]
 bot=Bot(c.TOKEN_BOT)
 
@@ -23,6 +24,10 @@ class Form(StatesGroup):
 
 class Test(StatesGroup):
     id_test=State()
+    start=State()
+
+class Test_find(StatesGroup):
+    tests_for_user=State()
     start=State()
 
 class Admin(StatesGroup):
@@ -77,6 +82,36 @@ async def test_id(message: Message,state: FSMContext):
     await bot.send_message(message.chat.id,text="Введите id теста")
     await state.set_state(Test.id_test)
 
+
+@dp.message(Command("my_test"))
+async def my_test(message: Message):
+    info_user = await user_info(message.from_user.id)
+    if info_user is None:
+        await bot.send_message(message.chat.id, text="Пользователь не зарегистрирован или не оплачено")
+    else:
+        tests_for_user=asyncio.to_thread(test_find,info_user[0],info_user[1])
+
+        btn1 = InlineKeyboardButton(text="СУБД", callback_data="option1")
+        btn2 = InlineKeyboardButton(text="САИО", callback_data="option2")
+        btn3 = InlineKeyboardButton(text="ОМО", callback_data="option3")
+        btn4 = InlineKeyboardButton(text="Апэц", callback_data="option4")
+        markup = InlineKeyboardMarkup(inline_keyboard=[[btn1, btn2, btn3, btn4]])
+        await bot.send_message(message.chat.id, text="Выберете тест", reply_markup=markup)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @dp.message(Command("admin"))
 async def admin(message: Message,state: FSMContext):
     await bot.send_message(message.chat.id, text="Введите пользователя")
@@ -112,7 +147,21 @@ async def id_test(message: Message, state: FSMContext):
     await state.clear()
 
 
-
+# @dp.callback_query(F.data.regexp(r"dinamic"))
+# async def callback(call: CallbackQuery):
+#
+#     btn1 = InlineKeyboardButton(text="начать решать", callback_data="id298405")
+#     markup1 = InlineKeyboardMarkup(inline_keyboard=[[btn1]])# субд
+#
+#     btn2 = InlineKeyboardButton(text="начать решать", callback_data="id321554")
+#     markup2 = InlineKeyboardMarkup(inline_keyboard=[[btn2]]) #саио
+#
+#
+#     btn3 = InlineKeyboardButton(text="начать решать", callback_data="id324848")
+#     markup3 = InlineKeyboardMarkup(inline_keyboard=[[btn3]]) #омо
+#
+#     btn4 = InlineKeyboardButton(text="начать решать", callback_data="id305095")
+#     markup4 = InlineKeyboardMarkup(inline_keyboard=[[btn4]]) #Апэц
 
 @dp.callback_query(F.data.regexp(r"option"))
 async def callback(call: CallbackQuery):
@@ -140,6 +189,17 @@ async def callback(call: CallbackQuery):
         await bot.send_message(call.message.chat.id, "АПЭЦ:", reply_markup=markup4)
 
 
+
+
+
+
+
+
+
+
+
+
+
 @dp.callback_query(F.data.regexp(r"^id(\d+)$"))
 async def solve(call: CallbackQuery):
     match = re.match(r"^id(\d+)$", call.data)
@@ -156,6 +216,9 @@ async def solve(call: CallbackQuery):
         except Exception as e:
             logging.error(f"Ошибка при решении теста: {e} у user:{info_user[2]} ")
             await bot.send_message(call.message.chat.id, text="ошибка при решении теста")
+
+
+
 
 
 
