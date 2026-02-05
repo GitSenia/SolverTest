@@ -28,7 +28,7 @@ class Test(StatesGroup):
 
 class Test_find(StatesGroup):
     tests_for_user=State()
-    start=State()
+    info_user=State()
 
 class Admin(StatesGroup):
     username=State()
@@ -83,20 +83,49 @@ async def test_id(message: Message,state: FSMContext):
     await state.set_state(Test.id_test)
 
 
-@dp.message(Command("my_test"))
-async def my_test(message: Message):
-    info_user = await user_info(message.from_user.id)
-    if info_user is None:
-        await bot.send_message(message.chat.id, text="Пользователь не зарегистрирован или не оплачено")
-    else:
-        tests_for_user=asyncio.to_thread(test_find,info_user[0],info_user[1])
 
-        btn1 = InlineKeyboardButton(text="СУБД", callback_data="option1")
-        btn2 = InlineKeyboardButton(text="САИО", callback_data="option2")
-        btn3 = InlineKeyboardButton(text="ОМО", callback_data="option3")
-        btn4 = InlineKeyboardButton(text="Апэц", callback_data="option4")
-        markup = InlineKeyboardMarkup(inline_keyboard=[[btn1, btn2, btn3, btn4]])
-        await bot.send_message(message.chat.id, text="Выберете тест", reply_markup=markup)
+
+
+
+@dp.message(Command("mytest"))
+async def my_test(message: Message,state: FSMContext):
+    await state.set_state(Test_find.tests_for_user)
+
+    info_user = await user_info(message.from_user.id)
+    await state.update_data(info_user=info_user)
+    if info_user is None:
+        await message.answer("Пользователь не зарегистрирован или не оплачено")
+        return
+
+    try:
+        tests_for_user = await asyncio.to_thread(
+            test_find,
+            info_user[0],
+            info_user[1]
+        )
+
+        keyboard = []
+        await state.update_data(tests_for_user=tests_for_user)
+        for sbj_teacher, name_tests in tests_for_user.items():
+            keyboard.append([
+                InlineKeyboardButton(
+                    text=f"{sbj_teacher[0]} / {sbj_teacher[1]}",
+                    callback_data=f"option_{sbj_teacher[0]}"
+                )
+            ])
+
+        markup = InlineKeyboardMarkup(inline_keyboard=keyboard)
+
+        await message.answer("Выберите тест", reply_markup=markup)
+
+    except Exception as e:
+        logging.exception(
+            f"Ошибка при решении теста у user:{info_user[2]}"
+        )
+        await message.answer("Какая-то ошибка 😢")
+
+
+
 
 
 

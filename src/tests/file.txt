@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru" xml:lang="ru">
+ <head>
+  <title>
+   Курс: Интернет-технологии и веб-программирование.  Часть 1 (ДН) Хаджинова | СЭО
+  </title>
+  <link href="https://lms.bsuir.by/theme/image.php/boost/theme/1769514173/favicon" rel="shortcut icon"/>
+  <style id="format-tiles-dynamic-css">
+   :root {
+    --format-tiles-colour-elems: 22,112,204;
+    --format-tiles-colour: rgb(22,112,204);
+    --format-tiles-colour-7: rgba(22,112,204, 0.7);
+    --format-tiles-colour-5: rgba(22,112,204, 0.5);
+    --format-tiles-colour-1: rgba(22,112,204, 0.1);
+    --format-tiles-colour-05: rgba(22,112,204, 0.05);
+    --format-tiles-photo-tile-text-bg-opacity: 0.7;
+    --format-tiles-photo-tile-text-line-height: 30.0px;
+    --format-tiles-photo-tile-text-padding: 1.5px;
+    --format-tiles-high-contrast-black: #000;
+}
+    .format-tiles .course-content li.activity.label h1,
+    .format-tiles .course-content .section li.activity.label h2,
+    .format-tiles .course-content li.activity.label h3,
+    .format-tiles .course-content li.activity.label h4,
+    .format-tiles .editor_atto_content_wrap h1,
+    .format-tiles .editor_atto_content_wrap h2,
+    .format-tiles .editor_atto_content_wrap h3,
+    .format-tiles .editor_atto_content_wrap h4 {
+        border-left-color: var(--format-tiles-colour);
+        border-left-style: solid;
+        padding-left: 0.4em;
+        border-left-width: 10px;
+    }
+
+        .format-tiles.course-8736.jsenabled:not(.editing) #format-tiles-multi-section-page {opacity: 0;}";
+  </style>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="moodle, Курс: Интернет-технологии и веб-программирование.  Часть 1 (ДН) Хаджинова | СЭО" name="keywords"/>
+  <link href="https://lms.bsuir.by/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css" rel="stylesheet" type="text/css"/>
+  <script id="firstthemesheet" type="text/css">
+   /** Required in order to fix style inclusion problems in IE with YUI **/
+  </script>
+  <link href="https://lms.bsuir.by/theme/styles.php/boost/1769514173_1/all" rel="stylesheet" type="text/css"/>
+  <script>
+   //<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/lms.bsuir.by","apibase":"https:\/\/lms.bsuir.by\/r.php\/api","homeurl":{},"sesskey":"R5tAAwPCIT","sessiontimeout":"14400","sessiontimeoutwarning":"2400","themerev":"1769514173","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1769514173","admin":"admin","svgicons":true,"usertimezone":"\u0415\u0432\u0440\u043e\u043f\u0430\/\u041c\u0438\u043d\u0441\u043a","language":"ru","courseId":8736,"courseContextId":638607,"contextid":638607,"contextInstanceId":8736,"langrev":1769737682,"templaterev":"1769514173","siteId":1,"userId":30091};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/lms.bsuir.by\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/lms.bsuir.by\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/lms.bsuir.by\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/lms.bsuir.by\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/lms.bsuir.by\/theme\/yui_combo.php?m\/1769514173\/","combine":true,"comboBase":"https:\/\/lms.bsuir.by\/theme\/yui_combo.php?","ext":false,"root":"m\/1769514173\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_stash-form":{"requires":["base","node","event","handlebars","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_hsuforum-livelog":{"requires":["widget"]},"moodle-mod_hsuforum-io":{"requires":["base","io-base","io-form","io-upload-iframe","json-parse"]},"moodle-mod_hsuforum-article":{"requires":["base","node","event","router","core_rating","querystring","moodle-mod_hsuforum-io","moodle-mod_hsuforum-livelog"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_c4l-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_ibooksrubook-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/lms.bsuir.by\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/lms.bsuir.by\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1769514173\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/lms.bsuir.by\/lib\/javascript.php\/1769514173\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/lms.bsuir.by\/lib\/javascript.php\/1769514173\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
+M.yui.loader = {modules: {}};
+
+//]]>
+  </script>
+  <meta content="сэо бгуир, бгуир,  дистанционка, до, сдо, до бгуир, фино, црдо, циир" name="keywords"/>
+  <meta content="Система электронного обучения БГУИР" name="description"/>
+  <meta content="z0Ca_VJ5cvg9kDYusV1Qi1VwJUvPME2c7cYpK8OXsL4" name="google-site-verification"/>
+  <meta content="9657ed5b101c9938" name="yandex-verification"/>
+  <meta content="7428a8baef16e979" name="yandex-verification"/>
+  <meta content="411c79967b5c9280" name="yandex-verification"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+ </head>
+ <body class="format-tiles limitedwidth path-course path-course-view dir-ltr lang-ru yui-skin-sam yui3-skin-sam lms-bsuir-by pagelayout-course course-8736 context-638607 category-181 theme uses-drawers" id="page-course-view-tiles">
+  <div aria-live="polite" class="toast-wrapper mx-auto py-0 fixed-top" role="status">
+  </div>
+  <div class="d-print-block" id="page-wrapper">
+   <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">
+     Перейти к основному содержанию
+    </a>
+   </div>
+   <script src="https://lms.bsuir.by/lib/javascript.php/1769514173/lib/polyfills/polyfill.js">
+   </script>
+   <script src="https://lms.bsuir.by/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js">
+   </script>
+   <script src="https://lms.bsuir.by/lib/javascript.php/1769514173/lib/javascript-static.js">
+   </script>
+   <script>
+    //<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+   </script>
+   <style>
+    .dropdown-item:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:focus-within {
+background-color: #1177d1;
+   </style>
+   <script>
+    window.onload = function() {
+        document.querySelectorAll(".group1").forEach(function(e) {
+            e.style.padding = '0px'
+            e.style.backgroundColor = 'rgba(255,255,255,0)'
+       });
+    };
+   </script>
+   <nav aria-label="Навигация по сайту" class="navbar fixed-top navbar-light bg-white navbar-expand">
+    <div class="container-fluid">
+     <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-action="toggle" data-target="theme_boost-drawers-primary" data-toggler="drawers">
+      <span class="navbar-toggler-icon">
+      </span>
+      <span class="sr-only">
+       Боковая панель
+      </span>
+     </button>
+     <a class="navbar-brand d-none d-md-flex align-items-center m-0 me-4 p-0 aabtn" href="https://lms.bsuir.by/">
+      <img alt="СЭО" class="logo me-1" src="https://lms.bsuir.by/pluginfile.php/1/core_admin/logocompact/300x300/1769514173/whitelog30.png"/>
+     </a>
+     <div class="primary-navigation">
+      <nav class="moremenu navigation">
+       <ul class="nav more-nav navbar-nav" id="moremenu-6983c4c8028b7-navbar-nav" role="menubar">
+        <li class="nav-item" data-forceintomoremenu="false" data-key="" role="none">
+         <a class="nav-link" data-disableactive="true" href="https://lms.bsuir.by/" role="menuitem" tabindex="-1" title="Russian">
+          На главную
+         </a>
+        </li>
+        <li class="dropdown nav-item" data-forceintomoremenu="false" role="none">
+         <a aria-controls="drop-down-menu-6983c4c802047" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" id="drop-down-6983c4c802047" role="menuitem" tabindex="-1" title="Russian">
+          Инструкции
+         </a>
+         <div aria-labelledby="drop-down-6983c4c802047" class="dropdown-menu" id="drop-down-menu-6983c4c802047" role="menu">
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/course/view.php?id=236" role="menuitem" tabindex="-1">
+           Для преподавателей
+          </a>
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/mod/book/view.php?id=12774" role="menuitem" tabindex="-1">
+           Для студентов
+          </a>
+          <div class="dropdown-divider">
+          </div>
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/course/view.php?id=8840" role="menuitem" tabindex="-1">
+           Семинары
+          </a>
+         </div>
+        </li>
+        <li class="dropdown nav-item" data-forceintomoremenu="false" role="none">
+         <a aria-controls="drop-down-menu-6983c4c80210b" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" id="drop-down-6983c4c80210b" role="menuitem" tabindex="-1" title="Russian">
+          Электронные материалы
+         </a>
+         <div aria-labelledby="drop-down-6983c4c80210b" class="dropdown-menu" id="drop-down-menu-6983c4c80210b" role="menu">
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/mod/data/view.php?id=95896" role="menuitem" tabindex="-1">
+           ЭОР
+          </a>
+          <div class="dropdown-divider">
+          </div>
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/mod/data/view.php?id=151062" role="menuitem" tabindex="-1">
+           ЭОР МРК
+          </a>
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/mod/data/view.php?id=261431" role="menuitem" tabindex="-1">
+           ЭУМК МРК
+          </a>
+          <div class="dropdown-divider">
+          </div>
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/course/view.php?id=6615" role="menuitem" tabindex="-1">
+           Записи открытых лекций
+          </a>
+          <div class="dropdown-divider">
+          </div>
+          <a class="dropdown-item" data-disableactive="true" href="https://books.bsuir.by/MegaPro/web" role="menuitem" tabindex="-1">
+           Каталог библиотеки БГУИР
+          </a>
+          <a class="dropdown-item" data-disableactive="true" href="https://library.bsuir.by/ru/bazy-dannykh" role="menuitem" tabindex="-1">
+           Электронные ресурсы библиотеки
+          </a>
+         </div>
+        </li>
+        <li class="dropdown nav-item" data-forceintomoremenu="false" role="none">
+         <a aria-controls="drop-down-menu-6983c4c80223a" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" id="drop-down-6983c4c80223a" role="menuitem" tabindex="-1" title="Russian">
+          Дополнительно
+         </a>
+         <div aria-labelledby="drop-down-6983c4c80223a" class="dropdown-menu" id="drop-down-menu-6983c4c80223a" role="menu">
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/course/view.php?id=8969" role="menuitem" tabindex="-1">
+           Отчеты
+          </a>
+          <a class="dropdown-item" data-disableactive="true" href="https://lms.bsuir.by/user/index.php?id=1" role="menuitem" tabindex="-1">
+           Список обучаемых
+          </a>
+          <a class="dropdown-item" data-disableactive="true" href="https://iis.bsuir.by/schedule" role="menuitem" tabindex="-1" target="_blank">
+           Расписание
+          </a>
+         </div>
+        </li>
+        <li class="dropdown nav-item" data-forceintomoremenu="false" role="none">
+         <a aria-controls="drop-down-menu-6983c4c8022b5" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" id="drop-down-6983c4c8022b5" role="menuitem" tabindex="-1" title="Russian">
+          Контакты
+         </a>
+         <div aria-labelledby="drop-down-6983c4c8022b5" class="dropdown-menu" id="drop-down-menu-6983c4c8022b5" role="menu">
+          <a class="dropdown-item" data-disableactive="true" href="https://courses.bsuir.by/support.html" role="menuitem" tabindex="-1" target="_blank">
+           Форма связи с техподдержкой
+          </a>
+          <a class="dropdown-item" data-disableactive="true" href="https://crdo.bsuir.by/contact.html" role="menuitem" tabindex="-1" target="_blank">
+           Телефонные номера ЦРДО
+          </a>
+         </div>
+        </li>
+        <li class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton" role="none">
+         <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" id="moremenu-dropdown-6983c4c8028b7" role="menuitem" tabindex="-1">
+          Дополнительно
+         </a>
+         <ul aria-labelledby="moremenu-dropdown-6983c4c8028b7" class="dropdown-menu dropdown-menu-left" data-region="moredropdown" role="menu">
+         </ul>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+      <!-- page_heading_menu -->
+     </ul>
+     <div class="navbar-nav ms-auto h-100" id="usernavigation">
+      <div class="popover-region collapsed popover-region-notifications" data-region="popover-region" data-userid="30091" id="nav-notification-popover-container">
+       <div aria-controls="popover-region-container-6983c4c80743e6983c4c803f202" aria-expanded="false" aria-haspopup="true" aria-label="  Показать окно с новыми уведомлениями (15)  " class="popover-region-toggle nav-link icon-no-margin" data-region="popover-region-toggle" role="button" tabindex="0" title="  Показать окно с новыми уведомлениями (15)  ">
+        <i aria-hidden="true" class="icon fa fa-bell fa-fw">
+        </i>
+        <div aria-hidden="true" class="count-container" data-region="count-container">
+         15
+        </div>
+       </div>
+       <div aria-hidden="true" aria-label="Окно уведомления" class="popover-region-container" data-region="popover-region-container" id="popover-region-container-6983c4c80743e6983c4c803f202" role="region">
+        <div class="popover-region-header-container">
+         <h3 class="popover-region-header-text" data-region="popover-region-header-text">
+          Уведомления
+         </h3>
+         <div class="popover-region-header-actions" data-region="popover-region-header-actions">
+          <a aria-label="Пометить все прочитанным" class="mark-all-read-button" data-action="mark-all-read" href="#" role="button" title="Пометить все прочитанным">
+           <span class="normal-icon">
+            <i aria-hidden="true" class="icon fa fa-check fa-fw">
+            </i>
+           </span>
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </a>
+          <a aria-label="Настройки уведомлений" href="https://lms.bsuir.by/message/notificationpreferences.php" title="Настройки уведомлений">
+           <i aria-hidden="true" class="icon fa fa-gear fa-fw">
+           </i>
+          </a>
+         </div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+         <div class="popover-region-content" data-region="popover-region-content">
+          <div aria-atomic="false" aria-busy="false" aria-relevant="additions" class="all-notifications" data-region="all-notifications" role="log">
+          </div>
+          <div class="empty-message" data-region="empty-message" tabindex="0">
+           Уведомлений нет
+          </div>
+         </div>
+         <span class="loading-icon icon-no-margin">
+          <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+          </i>
+         </span>
+        </div>
+        <a class="see-all-link" href="https://lms.bsuir.by/message/output/popup/notifications.php">
+         <div class="popover-region-footer-container">
+          <div class="popover-region-seeall-text">
+           Смотреть все
+          </div>
+         </div>
+        </a>
+       </div>
+      </div>
+      <div class="popover-region collapsed" data-region="popover-region-messages">
+       <a aria-describedby="unread-messages-count-6983c4c80a2706983c4c803f203" aria-expanded="false" aria-label="Сообщения" class="nav-link popover-region-toggle position-relative icon-no-margin" href="#" id="message-drawer-toggle-6983c4c80a2706983c4c803f203" role="button" title="Сообщения">
+        <i aria-hidden="true" class="icon fa fa-message fa-fw">
+        </i>
+        <div class="count-container hidden" data-region="count-container">
+         <span aria-hidden="true">
+          0
+         </span>
+         <span class="sr-only" id="unread-messages-count-6983c4c80a2706983c4c803f203">
+          Непрочитанных бесед: 0
+         </span>
+        </div>
+       </a>
+       <span class="sr-only sr-only-focusable" data-region="jumpto" tabindex="-1">
+       </span>
+      </div>
+      <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+       <div class="usermenu">
+        <div class="dropdown show">
+         <a aria-controls="user-action-menu" aria-haspopup="true" aria-label="Меню пользователя" class="btn dropdown-toggle" data-toggle="dropdown" href="#" id="user-menu-toggle" role="button">
+          <span class="userbutton">
+           <span class="avatars">
+            <span class="avatar current">
+             <span aria-label="Шилов Арсений Александрович" class="userinitials size-35" role="img" title="Шилов Арсений Александрович">
+              ША
+             </span>
+            </span>
+           </span>
+          </span>
+         </a>
+         <div class="dropdown-menu dropdown-menu-right" id="user-action-menu">
+          <div class="carousel slide" data-interval="false" data-keyboard="false" data-touch="false" id="usermenu-carousel">
+           <div class="carousel-inner">
+            <div aria-label="Пользователь" class="carousel-item active" id="carousel-item-main" role="menu" tabindex="-1">
+             <a class="dropdown-item" href="https://lms.bsuir.by/user/profile.php" role="menuitem" tabindex="-1">
+              О пользователе
+             </a>
+             <a class="dropdown-item" href="https://lms.bsuir.by/grade/report/overview/index.php" role="menuitem" tabindex="-1">
+              Оценки
+             </a>
+             <a class="dropdown-item" href="https://lms.bsuir.by/calendar/view.php?view=month" role="menuitem" tabindex="-1">
+              Календарь
+             </a>
+             <a class="dropdown-item" href="https://lms.bsuir.by/user/files.php" role="menuitem" tabindex="-1">
+              Личные файлы
+             </a>
+             <a class="dropdown-item" href="https://lms.bsuir.by/my/courses.php" role="menuitem" tabindex="-1">
+              Мои курсы
+             </a>
+             <a class="dropdown-item" href="https://lms.bsuir.by/my/" role="menuitem" tabindex="-1">
+              Личный кабинет
+             </a>
+             <div class="dropdown-divider">
+             </div>
+             <a class="dropdown-item" href="https://lms.bsuir.by/user/preferences.php" role="menuitem" tabindex="-1">
+              Настройки
+             </a>
+             <div class="dropdown-divider">
+             </div>
+             <a class="dropdown-item" href="https://lms.bsuir.by/login/logout.php?sesskey=R5tAAwPCIT" role="menuitem" tabindex="-1">
+              Выход
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </nav>
+   <div class="drawer drawer-left drawer-primary d-print-none not-initialized" data-close-on-resize="1" data-forceopen="0" data-preference="" data-region="fixed-drawer" data-state="show-drawer-primary" id="theme_boost-drawers-primary">
+    <div class="drawerheader">
+     <button class="btn drawertoggle icon-no-margin hidden" data-action="closedrawer" data-placement="right" data-target="theme_boost-drawers-primary" data-toggle="tooltip" data-toggler="drawers" title="Закрыть панель">
+      <i aria-hidden="true" class="icon fa fa-xmark fa-fw">
+      </i>
+     </button>
+     <a class="aabtn text-reset d-flex align-items-center py-1 h-100 d-md-none" data-region="site-home-link" href="https://lms.bsuir.by/" title="СЭО">
+      <img alt="СЭО" class="logo py-1 h-100" src="https://lms.bsuir.by/pluginfile.php/1/core_admin/logocompact/300x300/1769514173/whitelog30.png"/>
+     </a>
+     <div class="drawerheadercontent hidden">
+     </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+     <div class="list-group">
+      <a class="list-group-item list-group-item-action" href="https://lms.bsuir.by/">
+       На главную
+      </a>
+      <a aria-controls="drop-down-menu-4" aria-expanded="false" class="list-group-item list-group-item-action icons-collapse-expand collapsed d-flex" data-target="#drop-down-menu-4" data-toggle="collapse" href="#" id="drop-down-4">
+       Инструкции
+       <span class="ms-auto expanded-icon icon-no-margin mx-2">
+        <i aria-hidden="true" class="icon fa fa-chevron-down fa-fw">
+        </i>
+        <span class="sr-only">
+         Свернуть
+        </span>
+       </span>
+       <span class="ms-auto collapsed-icon icon-no-margin mx-2">
+        <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+        </i>
+        <span class="sr-only">
+         Развернуть
+        </span>
+       </span>
+      </a>
+      <div aria-labelledby="drop-down-4" class="collapse list-group-item p-0 border-0" id="drop-down-menu-4" role="menu">
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/course/view.php?id=236">
+        Для преподавателей
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/mod/book/view.php?id=12774">
+        Для студентов
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/course/view.php?id=8840">
+        Семинары
+       </a>
+      </div>
+      <a aria-controls="drop-down-menu-19" aria-expanded="false" class="list-group-item list-group-item-action icons-collapse-expand collapsed d-flex" data-target="#drop-down-menu-19" data-toggle="collapse" href="#" id="drop-down-19">
+       Электронные материалы
+       <span class="ms-auto expanded-icon icon-no-margin mx-2">
+        <i aria-hidden="true" class="icon fa fa-chevron-down fa-fw">
+        </i>
+        <span class="sr-only">
+         Свернуть
+        </span>
+       </span>
+       <span class="ms-auto collapsed-icon icon-no-margin mx-2">
+        <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+        </i>
+        <span class="sr-only">
+         Развернуть
+        </span>
+       </span>
+      </a>
+      <div aria-labelledby="drop-down-19" class="collapse list-group-item p-0 border-0" id="drop-down-menu-19" role="menu">
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/mod/data/view.php?id=95896">
+        ЭОР
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/mod/data/view.php?id=151062">
+        ЭОР МРК
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/mod/data/view.php?id=261431">
+        ЭУМК МРК
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/course/view.php?id=6615">
+        Записи открытых лекций
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://books.bsuir.by/MegaPro/web">
+        Каталог библиотеки БГУИР
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://library.bsuir.by/ru/bazy-dannykh">
+        Электронные ресурсы библиотеки
+       </a>
+      </div>
+      <a aria-controls="drop-down-menu-49" aria-expanded="false" class="list-group-item list-group-item-action icons-collapse-expand collapsed d-flex" data-target="#drop-down-menu-49" data-toggle="collapse" href="#" id="drop-down-49">
+       Дополнительно
+       <span class="ms-auto expanded-icon icon-no-margin mx-2">
+        <i aria-hidden="true" class="icon fa fa-chevron-down fa-fw">
+        </i>
+        <span class="sr-only">
+         Свернуть
+        </span>
+       </span>
+       <span class="ms-auto collapsed-icon icon-no-margin mx-2">
+        <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+        </i>
+        <span class="sr-only">
+         Развернуть
+        </span>
+       </span>
+      </a>
+      <div aria-labelledby="drop-down-49" class="collapse list-group-item p-0 border-0" id="drop-down-menu-49" role="menu">
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/course/view.php?id=8969">
+        Отчеты
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://lms.bsuir.by/user/index.php?id=1">
+        Список обучаемых
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://iis.bsuir.by/schedule" target="_blank">
+        Расписание
+       </a>
+      </div>
+      <a aria-controls="drop-down-menu-61" aria-expanded="false" class="list-group-item list-group-item-action icons-collapse-expand collapsed d-flex" data-target="#drop-down-menu-61" data-toggle="collapse" href="#" id="drop-down-61">
+       Контакты
+       <span class="ms-auto expanded-icon icon-no-margin mx-2">
+        <i aria-hidden="true" class="icon fa fa-chevron-down fa-fw">
+        </i>
+        <span class="sr-only">
+         Свернуть
+        </span>
+       </span>
+       <span class="ms-auto collapsed-icon icon-no-margin mx-2">
+        <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+        </i>
+        <span class="sr-only">
+         Развернуть
+        </span>
+       </span>
+      </a>
+      <div aria-labelledby="drop-down-61" class="collapse list-group-item p-0 border-0" id="drop-down-menu-61" role="menu">
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://courses.bsuir.by/support.html" target="_blank">
+        Форма связи с техподдержкой
+       </a>
+       <a class="ps-5 bg-light list-group-item list-group-item-action" href="https://crdo.bsuir.by/contact.html" target="_blank">
+        Телефонные номера ЦРДО
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="drawer drawer-left d-print-none not-initialized" data-close-on-resize="0" data-forceopen="0" data-preference="drawer-open-index" data-region="fixed-drawer" data-state="show-drawer-left" id="theme_boost-drawers-courseindex">
+    <div class="drawerheader">
+     <button class="btn drawertoggle icon-no-margin hidden" data-action="closedrawer" data-placement="right" data-target="theme_boost-drawers-courseindex" data-toggle="tooltip" data-toggler="drawers" title="Закрыть оглавление курса">
+      <i aria-hidden="true" class="icon fa fa-xmark fa-fw">
+      </i>
+     </button>
+     <a class="aabtn text-reset d-flex align-items-center py-1 h-100 d-md-none" data-region="site-home-link" href="https://lms.bsuir.by/" title="СЭО">
+     </a>
+     <div class="drawerheadercontent hidden">
+      <div class="dropdown" id="courseindexdrawercontrols">
+       <button aria-expanded="false" aria-haspopup="true" class="btn btn-icon rounded-circle mx-2" data-toggle="dropdown" title="Варианты оглавления курса" type="button">
+        <i aria-hidden="true" class="icon fa fa-ellipsis-v fa-fw m-0">
+        </i>
+       </button>
+       <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" data-action="expandallcourseindexsections" href="#">
+         <i aria-hidden="true" class="icon fa fa-angles-down fa-fw">
+         </i>
+         Развернуть всё
+        </a>
+        <a class="dropdown-item" data-action="collapseallcourseindexsections" href="#">
+         <span class="dir-rtl-hide">
+          <i aria-hidden="true" class="icon fa fa-angles-right fa-fw">
+          </i>
+         </span>
+         <span class="dir-ltr-hide">
+          <i aria-hidden="true" class="icon fa fa-angles-left fa-fw">
+          </i>
+         </span>
+         Свернуть всё
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+     <nav class="courseindex" id="courseindex">
+      <div id="courseindex-content">
+       <div aria-hidden="true" data-region="loading-placeholder-content" id="course-index-placeholder">
+        <ul class="placeholders list-unstyled px-5">
+         <li>
+          <div class="col-md-6 p-0 d-flex align-items-center">
+           <div class="bg-pulse-grey rounded-circle me-2">
+           </div>
+           <div class="bg-pulse-grey w-100">
+           </div>
+          </div>
+         </li>
+         <li>
+          <div class="col-md-6 p-0 d-flex align-items-center">
+           <div class="bg-pulse-grey rounded-circle me-2">
+           </div>
+           <div class="bg-pulse-grey w-100">
+           </div>
+          </div>
+         </li>
+         <li>
+          <div class="col-md-6 p-0 d-flex align-items-center">
+           <div class="bg-pulse-grey rounded-circle me-2">
+           </div>
+           <div class="bg-pulse-grey w-100">
+           </div>
+          </div>
+         </li>
+         <li>
+          <div class="col-md-6 p-0 d-flex align-items-center">
+           <div class="bg-pulse-grey rounded-circle me-2">
+           </div>
+           <div class="bg-pulse-grey w-100">
+           </div>
+          </div>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </nav>
+    </div>
+   </div>
+   <div class="drawers drag-container" data-region="mainpage" data-usertour="scroller" id="page">
+    <div class="main-inner" id="topofscroll">
+     <div class="drawer-toggles d-flex">
+      <div class="drawer-toggler drawer-left-toggle open-nav d-print-none">
+       <button class="btn icon-no-margin" data-action="toggle" data-placement="right" data-target="theme_boost-drawers-courseindex" data-toggle="tooltip" data-toggler="drawers" title="Открыть оглавление курса">
+        <span class="sr-only">
+         Открыть оглавление курса
+        </span>
+        <i aria-hidden="true" class="icon fa fa-list fa-fw">
+        </i>
+       </button>
+      </div>
+     </div>
+     <header class="header-maxwidth d-print-none" id="page-header">
+      <div class="w-100">
+       <div class="d-flex flex-wrap">
+        <div id="page-navbar">
+         <nav aria-label="Панель навигации">
+          <ol class="breadcrumb">
+          </ol>
+         </nav>
+        </div>
+        <div class="ms-auto d-flex">
+        </div>
+        <div id="course-header">
+        </div>
+       </div>
+       <div class="d-flex align-items-center">
+        <div class="me-auto">
+         <div class="page-context-header d-flex align-items-center mb-2">
+          <div class="page-header-headings">
+           <h1 class="h2 mb-0">
+            Интернет-технологии и веб-программирование.  Часть 1 (ДН) Хаджинова
+           </h1>
+          </div>
+         </div>
+        </div>
+        <div class="header-actions-container ms-auto" data-region="header-actions-container">
+        </div>
+       </div>
+      </div>
+     </header>
+     <div class="secondary-navigation d-print-none">
+      <nav class="moremenu navigation">
+       <ul class="nav more-nav nav-tabs" id="moremenu-6983c4c80157c-nav-tabs" role="menubar">
+        <li class="nav-item" data-forceintomoremenu="false" data-key="coursehome" role="none">
+         <a aria-current="true" class="nav-link active active_tree_node" data-disableactive="true" href="https://lms.bsuir.by/course/view.php?id=8736" role="menuitem">
+          Курс
+         </a>
+        </li>
+        <li class="nav-item" data-forceintomoremenu="false" data-key="participants" role="none">
+         <a class="nav-link" data-disableactive="true" href="https://lms.bsuir.by/user/index.php?id=8736" role="menuitem" tabindex="-1">
+          Участники
+         </a>
+        </li>
+        <li class="nav-item" data-forceintomoremenu="false" data-key="grades" role="none">
+         <a class="nav-link" data-disableactive="true" href="https://lms.bsuir.by/grade/report/index.php?id=8736" role="menuitem" tabindex="-1">
+          Оценки
+         </a>
+        </li>
+        <li class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton" role="none">
+         <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" id="moremenu-dropdown-6983c4c80157c" role="menuitem" tabindex="-1">
+          Дополнительно
+         </a>
+         <ul aria-labelledby="moremenu-dropdown-6983c4c80157c" class="dropdown-menu dropdown-menu-left" data-region="moredropdown" role="menu">
+         </ul>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="pb-3 d-print-block" id="page-content">
+      <div id="region-main-box">
+       <div id="region-main">
+        <span class="notifications" id="user-notifications">
+        </span>
+        <div role="main">
+         <span id="maincontent">
+         </span>
+         <div class="course-content">
+          <a href="https://lms.bsuir.by/course/view.php?id=8736&amp;skipcheck=1" id="page-loading-icon">
+           <div class="text-center mt-5">
+            <span>
+             <img alt="Загрузка" class="icon" src="https://lms.bsuir.by/theme/image.php/boost/format_tiles/1769514173/loading" title="Загрузка"/>
+            </span>
+            <div class="text-center" style="text-decoration: none;">
+             <small>
+              Нажмите, если страница не загружается
+             </small>
+            </div>
+           </div>
+          </a>
+          <div class="m-auto format-tiles-colour-subtile-icon-bg" id="format-tiles-multi-section-page">
+           <noscript>
+            <div class="alert alert-secondary" id="jswarning">
+             Похоже, ваш браузер не поддерживает javascript или javascript отключен. Расширенный интерфейс будет доступен, если Вы включите javascript.
+             <button class="btn-close" data-dismiss="alert" type="button">
+              <span aria-hidden="true">
+               ×
+              </span>
+              <span class="sr-only">
+               Отклонить это уведомление
+              </span>
+             </button>
+            </div>
+           </noscript>
+           <div class="" id="section-zero-container">
+            <div class="d-block d-sm-none">
+             <div class="above-tiles-buttons text-end">
+              <button class="sectionbutton buttonhidesec0 open float-end ms-1" data-section="0">
+               <span class="sec-zero-open-icon justify-content-center align-items-center h-100" title="Close top section">
+                <i aria-label="Close top section" class="icon fa fa-close fa-fw" role="img" title="Close top section">
+                </i>
+               </span>
+               <span class="sec-zero-closed-icon justify-content-center align-items-center h-100" title="Expand top section">
+                <i aria-label="Развернуть" class="icon fa fa-sort fa-fw" role="img" title="Развернуть">
+                </i>
+               </span>
+              </button>
+              <div class="btn-group">
+               <button aria-expanded="false" aria-haspopup="true" class="sectionbutton align-top" data-toggle="dropdown" title="Controls" type="button">
+                <span class="d-flex justify-content-center align-items-center h-100">
+                 <i aria-hidden="true" class="icon fa fa-ellipsis-h fa-fw m-0">
+                 </i>
+                </span>
+               </button>
+               <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="https://lms.bsuir.by/course/view.php?id=8736&amp;sesskey=R5tAAwPCIT&amp;format-tiles-action=toggleanimatednav">
+                 <i aria-label="On" class="icon fa fa-toggle-on fa-fw" role="img" title="On">
+                 </i>
+                 Включить анимированную навигацию
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="row">
+             <div class="col-sm-11">
+              <div class="section course-section main clearfix" data-section="0" id="section-0">
+               <h3>
+                Общее
+               </h3>
+               <div class="content">
+                <div class="summary">
+                </div>
+                <ul class="ps-0 nosubtiles" id="sec-zero-cm-list">
+                 <li class="activity activity-wrapper resource modtype_resource hasinfo mod_resource modtype_pdf" data-cmid="345071" data-completion="0" data-contextid="709595" data-for="cmitem" data-id="345071" data-modal="pdf" data-modinstance="112090" data-modtype="resource_pdf" data-title="Учебная программа по учебной дисциплине" id="module-345071">
+                  <div class="activity-item" data-activityname="Учебная программа по учебной дисциплине">
+                   <div class="bulkselect d-none" data-for="cmBulkSelect">
+                    <input data-action="toggleSelectionCm" data-bulkcheckbox="1" data-id="345071" id="cmCheckbox345071" type="checkbox"/>
+                    <label class="sr-only" for="cmCheckbox345071">
+                     Выбрать элемент Учебная программа по учебной дисциплине
+                    </label>
+                   </div>
+                   <div class="activity-grid tiles-activity-container" data-cmid="345071" data-modinstance="112090" data-title="Учебная программа по учебной дисциплине">
+                    <div class="activity-icon activityiconcontainer smaller content courseicon align-self-start me-2">
+                     <img alt="Иконка Файл" class="activityicon" src="https://lms.bsuir.by/theme/image.php/boost/core/1769514173/f/pdf?filtericon=1"/>
+                    </div>
+                    <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                     <div class="activitytitle media modtype_resource position-relative align-self-start">
+                      <div class="media-body align-self-center">
+                       <div class="activityname">
+                        <a class="aalink stretched-link" data-action="launch-tiles-cm-modal" href="https://lms.bsuir.by/mod/resource/view.php?id=345071" id="cm-link-345071">
+                         <span class="instancename">
+                          Учебная программа по учебной дисциплине
+                         </span>
+                        </a>
+                        <span class="ms-1">
+                         <span class="activitybadge badge rounded-pill">
+                         </span>
+                        </span>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <div class="activity-altcontent d-flex text-break activity-description">
+                     <div class="no-overflow">
+                      <div class="no-overflow">
+                       <ul>
+                        <li>
+                         <a href="https://www.bsuir.by/m/12_100229_1_200066.pdf" rel="noopener" target="_blank">
+                          № 2-420/уч.
+                         </a>
+                        </li>
+                       </ul>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </li>
+                </ul>
+               </div>
+              </div>
+             </div>
+             <div class="col-sm-1 d-none d-sm-block">
+              <div class="above-tiles-buttons text-end">
+               <button class="sectionbutton buttonhidesec0 open float-end ms-1" data-section="0">
+                <span class="sec-zero-open-icon justify-content-center align-items-center h-100" title="Close top section">
+                 <i aria-label="Close top section" class="icon fa fa-close fa-fw" role="img" title="Close top section">
+                 </i>
+                </span>
+                <span class="sec-zero-closed-icon justify-content-center align-items-center h-100" title="Expand top section">
+                 <i aria-label="Развернуть" class="icon fa fa-sort fa-fw" role="img" title="Развернуть">
+                 </i>
+                </span>
+               </button>
+               <div class="btn-group">
+                <button aria-expanded="false" aria-haspopup="true" class="sectionbutton align-top" data-toggle="dropdown" title="Controls" type="button">
+                 <span class="d-flex justify-content-center align-items-center h-100">
+                  <i aria-hidden="true" class="icon fa fa-ellipsis-h fa-fw m-0">
+                  </i>
+                 </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                 <a class="dropdown-item" href="https://lms.bsuir.by/course/view.php?id=8736&amp;sesskey=R5tAAwPCIT&amp;format-tiles-action=toggleanimatednav">
+                  <i aria-label="On" class="icon fa fa-toggle-on fa-fw" role="img" title="On">
+                  </i>
+                  Включить анимированную навигацию
+                 </a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="justify-content-end tilestyle-1" id="abovetiles">
+            <div class="ms-auto me-1 mb-2 pt-1 d-none d-sm-block" id="tiles-overall-progress-outer">
+            </div>
+           </div>
+           <ul class="tiles" id="multi_section_tiles">
+            <li class="tile tile-clickable tilestyle-1" data-section="1" data-true-sectionid="93574" id="tile-1">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Методические указания к изучению курса, opens detail in pop up, link" class="tile-link" data-section="1" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=1" id="sectionlink-1">
+              <div class="tile-content" id="tilecontent-1">
+               <div class="tile-top" id="tileTop-1">
+                <div class="tileiconcontainer" id="tileicon_1">
+                 <span class="tile-icon">
+                  <i aria-hidden="true" class="icon fa fa-file-text-o fa-fw">
+                  </i>
+                 </span>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-1">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-1">
+                <div class="tile-textinner longtitle" id="tileTextin-1">
+                 <h3>
+                  Методические указания к изучению курса
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="2" data-true-sectionid="93575" id="tile-2">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Модуль 1. Архитектура Интернет и сетевые ..., opens detail in pop up, link" class="tile-link" data-section="2" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=2" id="sectionlink-2">
+              <div class="tile-content" id="tilecontent-2">
+               <div class="tile-top" id="tileTop-2">
+                <div class="tileiconcontainer" id="tileicon_2">
+                 <h2 class="tile-number" data-number="1">
+                  1
+                 </h2>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-2">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-2">
+                <div class="tile-textinner longtitle" id="tileTextin-2">
+                 <h3>
+                  Модуль 1. Архитектура Интернет и сетевые ...
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="3" data-true-sectionid="93576" id="tile-3">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Модуль 2. Процесс веб-разработки и ..., opens detail in pop up, link" class="tile-link" data-section="3" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=3" id="sectionlink-3">
+              <div class="tile-content" id="tilecontent-3">
+               <div class="tile-top" id="tileTop-3">
+                <div class="tileiconcontainer" id="tileicon_3">
+                 <h2 class="tile-number" data-number="2">
+                  2
+                 </h2>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-3">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-3">
+                <div class="tile-textinner longtitle" id="tileTextin-3">
+                 <h3>
+                  Модуль 2. Процесс веб-разработки и ...
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="4" data-true-sectionid="93577" id="tile-4">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Модуль 3. Семантическая HTML-разметка и ..., opens detail in pop up, link" class="tile-link" data-section="4" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=4" id="sectionlink-4">
+              <div class="tile-content" id="tilecontent-4">
+               <div class="tile-top" id="tileTop-4">
+                <div class="tileiconcontainer" id="tileicon_4">
+                 <h2 class="tile-number" data-number="3">
+                  3
+                 </h2>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-4">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-4">
+                <div class="tile-textinner longtitle" id="tileTextin-4">
+                 <h3>
+                  Модуль 3. Семантическая HTML-разметка и ...
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="5" data-true-sectionid="93578" id="tile-5">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Модуль 4. Современный CSS: макеты и ..., opens detail in pop up, link" class="tile-link" data-section="5" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=5" id="sectionlink-5">
+              <div class="tile-content" id="tilecontent-5">
+               <div class="tile-top" id="tileTop-5">
+                <div class="tileiconcontainer" id="tileicon_5">
+                 <h2 class="tile-number" data-number="4">
+                  4
+                 </h2>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-5">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-5">
+                <div class="tile-textinner" id="tileTextin-5">
+                 <h3>
+                  Модуль 4. Современный CSS: макеты и ...
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="6" data-true-sectionid="93579" id="tile-6">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Модуль 5. JavaScript: основы языка и работа с DOM, opens detail in pop up, link" class="tile-link" data-section="6" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=6" id="sectionlink-6">
+              <div class="tile-content" id="tilecontent-6">
+               <div class="tile-top" id="tileTop-6">
+                <div class="tileiconcontainer" id="tileicon_6">
+                 <h2 class="tile-number" data-number="5">
+                  5
+                 </h2>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-6">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-6">
+                <div class="tile-textinner longtitle" id="tileTextin-6">
+                 <h3>
+                  Модуль 5. JavaScript: основы языка и работа с DOM
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="7" data-true-sectionid="93580" id="tile-7">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Модуль 6: JavaScript: асинхронность и хранение ..., opens detail in pop up, link" class="tile-link" data-section="7" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=7" id="sectionlink-7">
+              <div class="tile-content" id="tilecontent-7">
+               <div class="tile-top" id="tileTop-7">
+                <div class="tileiconcontainer" id="tileicon_7">
+                 <h2 class="tile-number" data-number="6">
+                  6
+                 </h2>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-7">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-7">
+                <div class="tile-textinner longtitle" id="tileTextin-7">
+                 <h3>
+                  Модуль 6: JavaScript: асинхронность и хранение ...
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="8" data-true-sectionid="93581" id="tile-8">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Модуль 7. Клиентские фреймворки: ..., opens detail in pop up, link" class="tile-link" data-section="8" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=8" id="sectionlink-8">
+              <div class="tile-content" id="tilecontent-8">
+               <div class="tile-top" id="tileTop-8">
+                <div class="tileiconcontainer" id="tileicon_8">
+                 <h2 class="tile-number" data-number="7">
+                  7
+                 </h2>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-8">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-8">
+                <div class="tile-textinner" id="tileTextin-8">
+                 <h3>
+                  Модуль 7. Клиентские фреймворки: ...
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="9" data-true-sectionid="93582" id="tile-9">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Модуль 8. Тестирование фронтенда и ..., opens detail in pop up, link" class="tile-link" data-section="9" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=9" id="sectionlink-9">
+              <div class="tile-content" id="tilecontent-9">
+               <div class="tile-top" id="tileTop-9">
+                <div class="tileiconcontainer" id="tileicon_9">
+                 <h2 class="tile-number" data-number="8">
+                  8
+                 </h2>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-9">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-9">
+                <div class="tile-textinner longtitle" id="tileTextin-9">
+                 <h3>
+                  Модуль 8. Тестирование фронтенда и ...
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="10" data-true-sectionid="93583" id="tile-10">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Дополнительные источники, opens detail in pop up, link" class="tile-link" data-section="10" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=10" id="sectionlink-10">
+              <div class="tile-content" id="tilecontent-10">
+               <div class="tile-top" id="tileTop-10">
+                <div class="tileiconcontainer" id="tileicon_10">
+                 <span class="tile-icon">
+                  <i aria-hidden="true" class="icon fa fa-book fa-fw">
+                  </i>
+                 </span>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-10">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-10">
+                <div class="tile-textinner" id="tileTextin-10">
+                 <h3>
+                  Дополнительные источники
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="tile tile-clickable tilestyle-1" data-section="11" data-true-sectionid="93584" id="tile-11">
+             <div class="tile-bg">
+             </div>
+             <a aria-label="Контроль знаний, opens detail in pop up, link" class="tile-link" data-section="11" href="https://lms.bsuir.by/course/view.php?id=8736&amp;section=11" id="sectionlink-11">
+              <div class="tile-content" id="tilecontent-11">
+               <div class="tile-top" id="tileTop-11">
+                <div class="tileiconcontainer" id="tileicon_11">
+                 <span class="tile-icon">
+                  <i aria-hidden="true" class="icon fa fa-question-circle fa-fw">
+                  </i>
+                 </span>
+                </div>
+                <div aria-hidden="true" class="tiletopright" id="tiletopright-11">
+                </div>
+               </div>
+               <div class="tile-text" id="tileText-11">
+                <div class="tile-textinner" id="tileTextin-11">
+                 <h3>
+                  Контроль знаний
+                 </h3>
+                </div>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li aria-hidden="true" class="tile spacer">
+            </li>
+            <li aria-hidden="true" class="tile spacer">
+            </li>
+            <li aria-hidden="true" class="tile spacer">
+            </li>
+            <li aria-hidden="true" class="tile spacer">
+            </li>
+            <li aria-hidden="true" class="tile spacer">
+            </li>
+            <li aria-hidden="true" class="tile spacer">
+            </li>
+            <li aria-hidden="true" class="tile spacer" id="lasttile">
+            </li>
+            <li class="section course-section main moveablesection" data-section="1" data-sectionid="93574" id="section-1" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="2" data-sectionid="93575" id="section-2" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="3" data-sectionid="93576" id="section-3" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="4" data-sectionid="93577" id="section-4" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="5" data-sectionid="93578" id="section-5" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="6" data-sectionid="93579" id="section-6" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="7" data-sectionid="93580" id="section-7" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="8" data-sectionid="93581" id="section-8" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="9" data-sectionid="93582" id="section-9" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="10" data-sectionid="93583" id="section-10" style="display: none;">
+            </li>
+            <li class="section course-section main moveablesection" data-section="11" data-sectionid="93584" id="section-11" style="display: none;">
+            </li>
+           </ul>
+           <div id="format_tiles_overlay" style="position: fixed; top: 0; left: 0; background-color:rgba(0,0,0,0.5); width: 100vw; height: 100vh; display: none;">
+           </div>
+          </div>
+         </div>
+         <div data-defaultcourseicon="pie-chart" data-modalallowedcmids="[345071,345073,345074,345075,345076,345082,345083,345085,345091,345092,345093,345095,345096,345097,345098,345100,345101,345102,345103,345104,345105,345106,345107,345108,345109,345112,345113,345114,345115,345116,345121,345127,345128,345129,345130,345131,345132,345134,345136,345137,345138,345140,345143,345149,345154,345155,345156,345157,345158,345159,345160,345163,345164,345165,345166,345167,345168,345171,345172,345173,345174,345176,345177,345178,345179,345180,345181,345184,345186,345188,345189,345191,345193,345195,345196,345197,345198,345200,345205,345213,345214,345215,345216,345217,345218,345219,345221,345222,345223,345225,345226,345227,345228,345229,345230,345234,345235,345237,345238,345241,345242,345244,345245,345247,345249,345252,345254,345255,345258,345260,345261,345262,345264,345265,345266,345267,345268,345269,345270,345271,345272,345273,345275,345277,345278,345279,345280,345281,345282,345283,345284,345285,345289,345291,345296,345297,345298,345299,345300,345301,345302,345303,345308,345313,345314,345315,345316,345321,345326,345327,345328,345329,345330,345332,345335,345336,345337,345338,345339,345340,345341,345347,345351,345352,345353,345354,345355,345356,345357,345359,345363,345370,345372,345373,345374,345375,345413,345414,345415,346707]" data-modalallowedmodnames='["page","pdf","url"]' id="format-tiles-js-config">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer-popover bg-white" id="page-footer">
+     <div data-region="footer-container-popover">
+      <button aria-label="Показать нижний колонтитул" class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover">
+       <i aria-hidden="true" class="icon fa fa-question fa-fw">
+       </i>
+      </button>
+     </div>
+     <div class="footer-content-popover container" data-region="footer-content-popover">
+      <div class="footer-section p-3 border-bottom">
+       <div class="footer-support-link">
+        <a href="https://courses.bsuir.by/customforms/form1.html" target="blank">
+         <i aria-hidden="true" class="icon fa-regular fa-envelope fa-fw">
+         </i>
+         Служба поддержки сайта
+         <i aria-hidden="true" class="icon fa fa-arrow-up-right-from-square fa-fw ms-1">
+         </i>
+        </a>
+       </div>
+      </div>
+      <div class="footer-section p-3 border-bottom">
+       <div class="logininfo">
+        <div class="logininfo">
+         Вы зашли под именем
+         <a href="https://lms.bsuir.by/user/profile.php?id=30091" title="Просмотр профиля">
+          Шилов Арсений Александрович
+         </a>
+         (
+         <a href="https://lms.bsuir.by/login/logout.php?sesskey=R5tAAwPCIT">
+          Выход
+         </a>
+         )
+        </div>
+       </div>
+       <div class="tool_usertours-resettourcontainer">
+       </div>
+       <div>
+        <a class="mobilelink" href="https://download.moodle.org/mobile?version=2024100704&amp;lang=ru&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">
+         Скачать мобильное приложение
+        </a>
+       </div>
+       <style>
+        /* Remove elements */
+.homelink {display: none;}
+.sitelink {display: none;}
+.logininfo {display: none;}
+
+/* .datapreferences {display: none;} */
+.tool_dataprivacy {display: none;}
+.activity-navigation {display: none;}
+#page-footer a {text-decoration: none;}
+.bs-tooltip-top {display: none;}
+// .coursebox > .info > .coursename a {display: inline; padding-left: 1.7em; background-position: left 0.05em;}
+       </style>
+       <div id="helpdesk">
+        <a href="https://courses.bsuir.by/customforms/form1.html">
+         Форма связи с техподдержкой
+        </a>
+        <p class="text-muted">
+         © ЦРДО БГУИР, г. Минск, Республика Беларусь, 2019-2025
+        </p>
+       </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-core.min.js">
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js">
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/line-numbers/prism-line-numbers.min.js">
+       </script>
+       <!-- Yandex.Metrika counter -->
+       <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(51942134, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+       </script>
+       <noscript>
+        <div>
+         <img alt="" src="https://mc.yandex.ru/watch/51942134" style="position:absolute; left:-9999px;"/>
+        </div>
+       </noscript>
+       <!-- /Yandex.Metrika counter -->
+       <script>
+        //<![CDATA[
+var require = {
+    baseUrl : 'https://lms.bsuir.by/lib/requirejs.php/1769514173/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://lms.bsuir.by/lib/javascript.php/1769514173/lib/jquery/jquery-3.7.1.min',
+        jqueryui: 'https://lms.bsuir.by/lib/javascript.php/1769514173/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://lms.bsuir.by/lib/javascript.php/1769514173/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+       </script>
+       <script src="https://lms.bsuir.by/lib/javascript.php/1769514173/lib/requirejs/require.min.js">
+       </script>
+       <script>
+        //<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"ru"}); M.util.js_complete('filter_mathjaxloader/loader');});;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('ru');
+});;
+M.util.js_pending('filter_glossary/autolinker'); require(['filter_glossary/autolinker'], function(amd) {amd.init(); M.util.js_complete('filter_glossary/autolinker');});;
+M.util.js_pending('core_courseformat/courseeditor'); require(['core_courseformat/courseeditor'], function(amd) {amd.setViewFormat("8736", {"editing":false,"supportscomponents":true,"statekey":"1769770336_1770243271","overriddenStrings":[]}); M.util.js_complete('core_courseformat/courseeditor');});;
+
+require(['core_courseformat/local/courseindex/placeholder'], function(component) {
+    component.init('course-index-placeholder');
+});
+;
+
+require(['core_courseformat/local/courseindex/drawer'], function(component) {
+    component.init('courseindex');
+});
+;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-6983c4c8028b7-navbar-nav'));
+    });
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, Controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new Controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(
+[
+    'jquery',
+    'core_message/message_popover'
+],
+function(
+    $,
+    Popover
+) {
+    var toggle = $('#message-drawer-toggle-6983c4c80a2706983c4c803f203');
+    Popover.init(toggle);
+});
+;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+    require(['theme_boost/courseindexdrawercontrols'], function(component) {
+    component.init('courseindexdrawercontrols');
+    });
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-6983c4c80157c-nav-tabs'));
+    });
+;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
+    var root = $('#message-drawer-6983c4c80e79b6983c4c803f204');
+    MessageDrawer.init(root, '6983c4c80e79b6983c4c803f204', false);
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core_courseformat/courseeditor'); require(['core_courseformat/courseeditor'], function(amd) {amd.setViewFormat("8736", {"editing":false,"supportscomponents":true,"statekey":"1769770336_1770243271","overriddenStrings":[]}); M.util.js_complete('core_courseformat/courseeditor');});;
+M.util.js_pending('format_tiles/course'); require(['format_tiles/course'], function(amd) {amd.init("8736", true, 0, 0, 0, "1", "0", "30091", true, "1", false, 638607); M.util.js_complete('format_tiles/course');});;
+M.util.js_pending('format_tiles/completion'); require(['format_tiles/completion'], function(amd) {amd.init("8736"); M.util.js_complete('format_tiles/completion');});;
+M.util.js_pending('core_course/view'); require(['core_course/view'], function(amd) {amd.init(); M.util.js_complete('core_course/view');});;
+M.util.js_pending('format_tiles/course_mod_modal'); require(['format_tiles/course_mod_modal'], function(amd) {amd.init("8736", false, "course-view-tiles", null, true); M.util.js_complete('format_tiles/course_mod_modal');});;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(638607, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(1770243271); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?delayStartupUntil=configured">
+       </script>
+       <script src="https://lms.bsuir.by/lib/javascript.php/1769514173/course/format/tiles/format.js">
+       </script>
+       <script>
+        //<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435","name":"\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435","error":"\u041e\u0448\u0438\u0431\u043a\u0430","info":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f","yes":"\u0414\u0430","no":"\u041d\u0435\u0442","cancel":"\u041e\u0442\u043c\u0435\u043d\u0430","confirm":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c","areyousure":"\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b?","closebuttontitle":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","unknownerror":"\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430","file":"\u0424\u0430\u0439\u043b","url":"URL","collapseall":"\u0421\u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0432\u0441\u0451","expandall":"\u0420\u0430\u0437\u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0432\u0441\u0451"},"repository":{"type":"\u0422\u0438\u043f","size":"\u0420\u0430\u0437\u043c\u0435\u0440","invalidjson":"\u041d\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u0441\u0442\u0440\u043e\u043a\u0430 JSON","nofilesattached":"\u041d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d \u043d\u0438 \u043e\u0434\u0438\u043d \u0444\u0430\u0439\u043b","filepicker":"\u0412\u044b\u0431\u043e\u0440 \u0444\u0430\u0439\u043b\u0430","logout":"\u0412\u044b\u0445\u043e\u0434","nofilesavailable":"\u041d\u0435\u0442 \u043d\u0438 \u043e\u0434\u043d\u043e\u0433\u043e \u0444\u0430\u0439\u043b\u0430","norepositoriesavailable":"\u041a \u0441\u043e\u0436\u0430\u043b\u0435\u043d\u0438\u044e, \u043d\u0438 \u043e\u0434\u043d\u043e \u0438\u0437 \u0412\u0430\u0448\u0438\u0445 \u0442\u0435\u043a\u0443\u0449\u0438\u0445 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449 \u0444\u0430\u0439\u043b\u043e\u0432 \u043d\u0435 \u043c\u043e\u0436\u0435\u0442 \u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0444\u0430\u0439\u043b\u044b \u0432 \u0437\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u043c\u043e\u043c \u0444\u043e\u0440\u043c\u0430\u0442\u0435.","fileexistsdialogheader":"\u0424\u0430\u0439\u043b \u0441\u043e\u0437\u0434\u0430\u043d","fileexistsdialog_editor":"\u0424\u0430\u0439\u043b \u0441 \u044d\u0442\u0438\u043c \u0438\u043c\u0435\u043d\u0435\u043c \u0443\u0436\u0435 \u0431\u044b\u043b \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d \u043a \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0443\u0435\u043c\u043e\u043c\u0443 \u0442\u0435\u043a\u0441\u0442\u0443","fileexistsdialog_filemanager":"\u0424\u0430\u0439\u043b \u0441 \u044d\u0442\u0438\u043c \u0438\u043c\u0435\u043d\u0435\u043c \u0443\u0436\u0435 \u0431\u044b\u043b \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d","renameto":"\u041f\u0435\u0440\u0435\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u0442\u044c \u0432 \u00ab{$a}\u00bb","referencesexist":"\u041d\u0430 \u044d\u0442\u043e\u0442 \u0444\u0430\u0439\u043b \u0435\u0441\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0438: {$a}","select":"\u0412\u044b\u0431\u0440\u0430\u0442\u044c"},"admin":{"confirmdeletecomments":"\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b \u0432 \u0442\u043e\u043c, \u0447\u0442\u043e \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442\u0435\u0441\u044c \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u044b\u0435 \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438?","confirmation":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u0438\u0435"},"debug":{"debuginfo":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u043e\u0431 \u043e\u0442\u043b\u0430\u0434\u043a\u0435","line":"\u0421\u0442\u0440\u043e\u043a\u0430","stacktrace":"\u0422\u0440\u0430\u0441\u0441\u0438\u0440\u043e\u0432\u043a\u0438 \u0441\u0442\u0435\u043a\u0430"},"langconfig":{"labelsep":":"}};
+//]]>
+       </script>
+       <script>
+        //<![CDATA[
+(function() {M.util.help_popups.setup(Y);
+ M.util.js_pending('random6983c4c803f205'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6983c4c803f205'); });
+})();
+//]]>
+       </script>
+      </div>
+      <div class="footer-section p-3">
+       <div>
+        На платформе
+        <a href="https://moodle.com">
+         Moodle
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="footer-content-debugging footer-dark bg-dark text-light">
+      <div class="container-fluid footer-dark-inner">
+      </div>
+     </div>
+    </footer>
+   </div>
+   <div aria-hidden="true" class="drawer bg-white hidden" data-region="right-hand-drawer" id="drawer-6983c4c80e79b6983c4c803f204" role="region" tabindex="0">
+    <div class="message-app" data-region="message-drawer" id="message-drawer-6983c4c80e79b6983c4c803f204" role="region">
+     <h2 class="sr-only">
+      Обмен сообщениями
+     </h2>
+     <div class="closewidget text-end pe-2">
+      <a aria-label="Закрыть" class="text-dark btn-link" data-action="closedrawer" href="#" title="Закрыть">
+       <i aria-hidden="true" class="icon fa fa-xmark fa-fw">
+       </i>
+      </a>
+     </div>
+     <div class="header-container position-relative" data-region="header-container">
+      <div aria-hidden="true" class="hidden border-bottom p-1 px-sm-2" data-region="view-contacts">
+       <div class="d-flex align-items-center">
+        <div class="align-self-stretch">
+         <a class="h-100 d-flex align-items-center me-2" data-route-back="" href="#" role="button">
+          <div class="icon-back-in-drawer">
+           <span class="dir-rtl-hide">
+            <i aria-hidden="true" class="icon fa fa-chevron-left fa-fw">
+            </i>
+           </span>
+           <span class="dir-ltr-hide">
+            <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+            </i>
+           </span>
+          </div>
+          <div class="icon-back-in-app">
+           <span class="dir-rtl-hide">
+            <i aria-hidden="true" class="icon fa fa-xmark fa-fw">
+            </i>
+           </span>
+          </div>
+         </a>
+        </div>
+        <div>
+         Собеседники
+        </div>
+        <div class="ms-auto">
+         <a aria-label="Поиск" data-route="view-search" href="#" role="button">
+          <i aria-hidden="true" class="icon fa fa-magnifying-glass fa-fw">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div aria-hidden="true" class="hidden bg-white position-relative border-bottom p-1 px-sm-2" data-region="view-conversation">
+       <div class="hidden" data-region="header-content">
+       </div>
+       <div class="hidden" data-region="header-edit-mode">
+        <div class="d-flex p-2 align-items-center">
+         Выбранные сообщения:
+         <span class="ms-1" data-region="message-selected-court">
+          1
+         </span>
+         <button aria-label="Отменить выбор сообщения" class="ms-auto btn-close" data-action="cancel-edit-mode" type="button">
+          <span aria-hidden="true">
+           ×
+          </span>
+         </button>
+        </div>
+       </div>
+       <div data-region="header-placeholder">
+        <div class="d-flex">
+         <div class="ms-2 rounded-circle bg-pulse-grey align-self-center" style="height: 38px; width: 38px">
+         </div>
+         <div class="ms-2" style="flex: 1">
+          <div class="mt-1 bg-pulse-grey w-75" style="height: 16px;">
+          </div>
+         </div>
+         <div class="ms-2 bg-pulse-grey align-self-center" style="height: 16px; width: 20px">
+         </div>
+        </div>
+       </div>
+       <div class="hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: 0; bottom: -1px; right: 0; left: 0; background: rgba(0,0,0,0.3);">
+       </div>
+      </div>
+      <div aria-hidden="false" class="border-bottom p-1 px-sm-2" data-region="view-overview">
+       <div class="d-flex align-items-center">
+        <div class="input-group simplesearchform">
+         <input aria-label="Поиск" class="form-control" data-region="view-overview-search-input" placeholder="Поиск" type="text"/>
+         <div class="input-group-append">
+          <span class="icon-no-margin btn btn-submit">
+           <i aria-hidden="true" class="icon fa fa-magnifying-glass fa-fw">
+           </i>
+          </span>
+         </div>
+        </div>
+        <div class="ms-2">
+         <a aria-label="Настройки" data-route="view-settings" data-route-param="30091" href="#" role="button">
+          <i aria-hidden="true" class="icon fa fa-gear fa-fw">
+          </i>
+         </a>
+        </div>
+       </div>
+       <div class="text-end mt-sm-3">
+        <a data-route="view-contacts" href="#" role="button">
+         <i aria-hidden="true" class="icon fa fa-user fa-fw">
+         </i>
+         Собеседники
+         <span class="badge bg-primary text-white ms-2 hidden" data-region="contact-request-count">
+          <span aria-hidden="true">
+           0
+          </span>
+          <span class="sr-only">
+           Ожидающих запросов на добавление в собеседники: 0
+          </span>
+         </span>
+        </a>
+       </div>
+      </div>
+      <div aria-hidden="true" class="hidden border-bottom p-1 px-sm-2 view-search" data-region="view-search">
+       <div class="d-flex align-items-center">
+        <a class="me-2 align-self-stretch d-flex align-items-center" data-action="cancel-search" data-route-back="" href="#" role="button">
+         <div class="icon-back-in-drawer">
+          <span class="dir-rtl-hide">
+           <i aria-hidden="true" class="icon fa fa-chevron-left fa-fw">
+           </i>
+          </span>
+          <span class="dir-ltr-hide">
+           <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+           </i>
+          </span>
+         </div>
+         <div class="icon-back-in-app">
+          <span class="dir-rtl-hide">
+           <i aria-hidden="true" class="icon fa fa-xmark fa-fw">
+           </i>
+          </span>
+         </div>
+        </a>
+        <div class="input-group simplesearchform">
+         <input aria-label="Поиск" class="form-control" data-region="search-input" placeholder="Поиск" type="text"/>
+         <div class="input-group-append">
+          <button aria-label="Поиск" class="btn btn-submit icon-no-margin" data-action="search" type="button">
+           <span data-region="search-icon-container">
+            <i aria-hidden="true" class="icon fa fa-magnifying-glass fa-fw">
+            </i>
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div aria-hidden="true" class="hidden border-bottom p-1 px-sm-2 pb-sm-3" data-region="view-settings">
+       <div class="d-flex align-items-center">
+        <div class="align-self-stretch">
+         <a class="h-100 d-flex me-2 align-items-center" data-route-back="" href="#" role="button">
+          <div class="icon-back-in-drawer">
+           <span class="dir-rtl-hide">
+            <i aria-hidden="true" class="icon fa fa-chevron-left fa-fw">
+            </i>
+           </span>
+           <span class="dir-ltr-hide">
+            <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+            </i>
+           </span>
+          </div>
+          <div class="icon-back-in-app">
+           <span class="dir-rtl-hide">
+            <i aria-hidden="true" class="icon fa fa-xmark fa-fw">
+            </i>
+           </span>
+          </div>
+         </a>
+        </div>
+        <div>
+         Настройки
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="body-container position-relative" data-region="body-container">
+      <div aria-hidden="true" class="hidden" data-region="view-contact">
+       <div class="p-2 pt-3" data-region="content-container">
+       </div>
+      </div>
+      <div aria-hidden="true" class="hidden h-100" data-region="view-contacts" data-user-id="30091">
+       <div class="d-flex flex-column h-100">
+        <div class="p-3 border-bottom">
+         <ul class="nav nav-pills nav-fill" role="tablist">
+          <li class="nav-item">
+           <a aria-controls="contacts-tab-panel-6983c4c80e79b6983c4c803f204" aria-selected="true" class="nav-link active" data-action="show-contacts-section" data-toggle="tab" href="#contacts-tab-panel-6983c4c80e79b6983c4c803f204" id="contacts-tab-6983c4c80e79b6983c4c803f204" role="tab">
+            Собеседники
+           </a>
+          </li>
+          <li class="nav-item">
+           <a aria-controls="requests-tab-panel-6983c4c80e79b6983c4c803f204" aria-selected="false" class="nav-link" data-action="show-requests-section" data-toggle="tab" href="#requests-tab-panel-6983c4c80e79b6983c4c803f204" id="requests-tab-6983c4c80e79b6983c4c803f204" role="tab">
+            Запросы
+            <span class="badge bg-primary text-white ms-2 hidden" data-region="contact-request-count">
+             <span aria-hidden="true">
+              0
+             </span>
+             <span class="sr-only">
+              Ожидающих запросов на добавление в собеседники: 0
+             </span>
+            </span>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="tab-content d-flex flex-column h-100">
+         <div aria-labelledby="contacts-tab-6983c4c80e79b6983c4c803f204" aria-live="polite" class="tab-pane fade show active h-100 lazy-load-list" data-region="lazy-load-list" data-section="contacts" data-user-id="30091" id="contacts-tab-panel-6983c4c80e79b6983c4c803f204" role="tabpanel">
+          <div class="hidden text-center p-2" data-region="empty-message-container">
+           Нет контактов
+          </div>
+          <div class="hidden list-group" data-region="content-container">
+          </div>
+          <div class="list-group" data-region="placeholder-container">
+          </div>
+          <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </div>
+         </div>
+         <div aria-labelledby="requests-tab-6983c4c80e79b6983c4c803f204" aria-live="polite" class="tab-pane fade h-100 lazy-load-list" data-region="lazy-load-list" data-section="requests" data-user-id="30091" id="requests-tab-panel-6983c4c80e79b6983c4c803f204" role="tabpanel">
+          <div class="hidden text-center p-2" data-region="empty-message-container">
+           Нет запросов на добавление в собеседники
+          </div>
+          <div class="hidden list-group" data-region="content-container">
+          </div>
+          <div class="list-group" data-region="placeholder-container">
+          </div>
+          <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div aria-hidden="true" class="view-conversation hidden h-100" data-message-poll-after-max="300" data-message-poll-max="120" data-message-poll-min="10" data-midnight="1770238800" data-region="view-conversation" data-user-id="30091" style="overflow-y: auto; overflow-x: hidden">
+       <div class="position-relative h-100" data-region="content-container" style="overflow-y: auto; overflow-x: hidden">
+        <div class="content-message-container hidden h-100 px-2 pt-0" data-region="content-message-container" role="log" style="overflow-y: auto; overflow-x: hidden">
+         <div class="py-3 border-bottom text-center hidden" data-region="contact-request-sent-message-container">
+          <p class="m-0">
+           Запрос на добавление в собеседники отправлен
+          </p>
+          <p class="font-italic font-weight-light" data-region="text">
+          </p>
+         </div>
+         <div class="p-3 text-center hidden" data-region="self-conversation-message-container">
+          <p class="m-0">
+           Личное пространство
+          </p>
+          <p class="font-italic font-weight-light" data-region="text">
+           Сохраните черновики сообщений, ссылок, заметок и т.п. К ним можно будет вернуться позже.
+          </p>
+         </div>
+         <div class="hidden text-center p-3" data-region="more-messages-loading-icon-container">
+          <span class="loading-icon icon-no-margin">
+           <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+           </i>
+          </span>
+         </div>
+        </div>
+        <div class="p-4 w-100 h-100 hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: 0; background: rgba(0,0,0,0.3);">
+         <div class="p-3 bg-white" data-region="confirm-dialogue" role="alert">
+          <p class="text-muted" data-region="dialogue-text">
+          </p>
+          <div class="mb-2 custom-control custom-checkbox hidden" data-region="delete-messages-for-all-users-toggle-container">
+           <input class="custom-control-input" data-region="delete-messages-for-all-users-toggle" id="delete-messages-for-all-users" type="checkbox"/>
+           <label class="custom-control-label text-muted" for="delete-messages-for-all-users">
+            Удалить у меня и у всех остальных
+           </label>
+          </div>
+          <button class="btn btn-primary btn-block hidden" data-action="confirm-block" type="button">
+           <span data-region="dialogue-button-text">
+            Блок
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-primary btn-block hidden" data-action="confirm-unblock" type="button">
+           <span data-region="dialogue-button-text">
+            Разблокировать
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-primary btn-block hidden" data-action="confirm-remove-contact" type="button">
+           <span data-region="dialogue-button-text">
+            Удалить
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-primary btn-block hidden" data-action="confirm-add-contact" type="button">
+           <span data-region="dialogue-button-text">
+            Добавить
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-primary btn-block hidden" data-action="confirm-delete-selected-messages" type="button">
+           <span data-region="dialogue-button-text">
+            Удалить
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-primary btn-block hidden" data-action="confirm-delete-conversation" type="button">
+           <span data-region="dialogue-button-text">
+            Удалить
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-primary btn-block hidden" data-action="request-add-contact" type="button">
+           <span data-region="dialogue-button-text">
+            Отправить запрос на добавление в собеседники
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-primary btn-block hidden" data-action="accept-contact-request" type="button">
+           <span data-region="dialogue-button-text">
+            Принять и добавить в контакты
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-secondary btn-block hidden" data-action="decline-contact-request" type="button">
+           <span data-region="dialogue-button-text">
+            Отказаться
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+          <button class="btn btn-primary btn-block" data-action="okay-confirm" type="button">
+           OK
+          </button>
+          <button class="btn btn-secondary btn-block" data-action="cancel-confirm" type="button">
+           Отмена
+          </button>
+         </div>
+        </div>
+        <div class="px-2 pb-2 pt-0" data-region="content-placeholder">
+         <div class="h-100 d-flex flex-column">
+          <div class="px-2 pb-2 pt-0 bg-light h-100" style="overflow-y: auto">
+           <div class="mt-4">
+            <div class="mb-4">
+             <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+           </div>
+           <div class="mt-4">
+            <div class="mb-4">
+             <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+           </div>
+           <div class="mt-4">
+            <div class="mb-4">
+             <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+           </div>
+           <div class="mt-4">
+            <div class="mb-4">
+             <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+           </div>
+           <div class="mt-4">
+            <div class="mb-4">
+             <div class="mx-auto bg-white" style="height: 25px; width: 100px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+            <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+             <div class="d-flex align-items-center mb-2">
+              <div class="me-2">
+               <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px">
+               </div>
+              </div>
+              <div class="me-4 w-75 bg-pulse-grey" style="height: 16px">
+              </div>
+              <div class="ms-auto bg-pulse-grey" style="width: 35px; height: 16px">
+              </div>
+             </div>
+             <div class="bg-pulse-grey w-100" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-100 mt-2" style="height: 16px">
+             </div>
+             <div class="bg-pulse-grey w-75 mt-2" style="height: 16px">
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div aria-hidden="true" class="hidden" data-region="view-group-info">
+       <div class="pt-3 h-100 d-flex flex-column" data-region="group-info-content-container" style="overflow-y: auto">
+       </div>
+      </div>
+      <div aria-hidden="false" class="h-100 view-overview-body" data-region="view-overview" data-user-id="30091">
+       <div class="d-flex flex-column h-100" id="message-drawer-view-overview-container-6983c4c80e79b6983c4c803f204" style="overflow-y: auto">
+        <div class="section border-0 card rounded-0" data-region="view-overview-favourites">
+         <div class="card-header rounded-0" data-region="toggle" id="view-overview-favourites-toggle">
+          <button aria-controls="view-overview-favourites-target-6983c4c80e79b6983c4c803f204" aria-expanded="false" class="btn btn-link w-100 text-start p-1 p-sm-2 d-flex rounded-0 align-items-center overview-section-toggle collapsed" data-target="#view-overview-favourites-target-6983c4c80e79b6983c4c803f204" data-toggle="collapse">
+           <span class="collapsed-icon-container">
+            <span class="dir-rtl-hide">
+             <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+             </i>
+            </span>
+            <span class="dir-ltr-hide">
+             <i aria-hidden="true" class="icon fa fa-chevron-left fa-fw">
+             </i>
+            </span>
+           </span>
+           <span class="expanded-icon-container">
+            <i aria-hidden="true" class="icon fa fa-chevron-down fa-fw">
+            </i>
+           </span>
+           <span class="font-weight-bold ms-1">
+            Помеченные
+           </span>
+           <small aria-labelledby="view-overview-favourites-total-count-label" class="hidden ms-1" data-region="section-total-count-container">
+            (
+            <span aria-hidden="true" data-region="section-total-count">
+            </span>
+            )
+            <span class="sr-only" id="view-overview-favourites-total-count-label">
+             Всего бесед:
+            </span>
+           </small>
+           <span class="hidden ms-2" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+           <span aria-labelledby="view-overview-favourites-unread-count-label" class="hidden badge rounded-pill bg-primary text-white ms-auto" data-region="section-unread-count-container">
+            <span aria-hidden="true" data-region="section-unread-count">
+            </span>
+            <span class="sr-only" id="view-overview-favourites-unread-count-label">
+             Непрочитанных бесед:
+            </span>
+           </span>
+          </button>
+         </div>
+         <div aria-labelledby="view-overview-favourites-toggle" aria-live="polite" class="collapse border-bottom lazy-load-list" data-parent="#message-drawer-view-overview-container-6983c4c80e79b6983c4c803f204" data-region="lazy-load-list" data-user-id="30091" id="view-overview-favourites-target-6983c4c80e79b6983c4c803f204">
+          <div class="hidden text-center p-2" data-region="empty-message-container">
+           <p class="text-muted mt-2">
+            Нет помеченных бесед
+           </p>
+          </div>
+          <div class="hidden list-group" data-region="content-container">
+          </div>
+          <div class="list-group" data-region="placeholder-container">
+           <div class="text-center py-2">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </div>
+          </div>
+          <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="section border-0 card rounded-0" data-region="view-overview-group-messages">
+         <div class="card-header rounded-0" data-region="toggle" id="view-overview-group-messages-toggle">
+          <button aria-controls="view-overview-group-messages-target-6983c4c80e79b6983c4c803f204" aria-expanded="false" class="btn btn-link w-100 text-start p-1 p-sm-2 d-flex rounded-0 align-items-center overview-section-toggle collapsed" data-target="#view-overview-group-messages-target-6983c4c80e79b6983c4c803f204" data-toggle="collapse">
+           <span class="collapsed-icon-container">
+            <span class="dir-rtl-hide">
+             <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+             </i>
+            </span>
+            <span class="dir-ltr-hide">
+             <i aria-hidden="true" class="icon fa fa-chevron-left fa-fw">
+             </i>
+            </span>
+           </span>
+           <span class="expanded-icon-container">
+            <i aria-hidden="true" class="icon fa fa-chevron-down fa-fw">
+            </i>
+           </span>
+           <span class="font-weight-bold ms-1">
+            Группа
+           </span>
+           <small aria-labelledby="view-overview-group-messages-total-count-label" class="hidden ms-1" data-region="section-total-count-container">
+            (
+            <span aria-hidden="true" data-region="section-total-count">
+            </span>
+            )
+            <span class="sr-only" id="view-overview-group-messages-total-count-label">
+             Всего бесед:
+            </span>
+           </small>
+           <span class="hidden ms-2" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+           <span aria-labelledby="view-overview-group-messages-unread-count-label" class="hidden badge rounded-pill bg-primary text-white ms-auto" data-region="section-unread-count-container">
+            <span aria-hidden="true" data-region="section-unread-count">
+            </span>
+            <span class="sr-only" id="view-overview-group-messages-unread-count-label">
+             Непрочитанных бесед:
+            </span>
+           </span>
+          </button>
+         </div>
+         <div aria-labelledby="view-overview-group-messages-toggle" aria-live="polite" class="collapse border-bottom lazy-load-list" data-parent="#message-drawer-view-overview-container-6983c4c80e79b6983c4c803f204" data-region="lazy-load-list" data-user-id="30091" id="view-overview-group-messages-target-6983c4c80e79b6983c4c803f204">
+          <div class="hidden text-center p-2" data-region="empty-message-container">
+           <p class="text-muted mt-2">
+            Нет групповых бесед
+           </p>
+          </div>
+          <div class="hidden list-group" data-region="content-container">
+          </div>
+          <div class="list-group" data-region="placeholder-container">
+           <div class="text-center py-2">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </div>
+          </div>
+          <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="section border-0 card rounded-0" data-region="view-overview-messages">
+         <div class="card-header rounded-0" data-region="toggle" id="view-overview-messages-toggle">
+          <button aria-controls="view-overview-messages-target-6983c4c80e79b6983c4c803f204" aria-expanded="false" class="btn btn-link w-100 text-start p-1 p-sm-2 d-flex rounded-0 align-items-center overview-section-toggle collapsed" data-target="#view-overview-messages-target-6983c4c80e79b6983c4c803f204" data-toggle="collapse">
+           <span class="collapsed-icon-container">
+            <span class="dir-rtl-hide">
+             <i aria-hidden="true" class="icon fa fa-chevron-right fa-fw">
+             </i>
+            </span>
+            <span class="dir-ltr-hide">
+             <i aria-hidden="true" class="icon fa fa-chevron-left fa-fw">
+             </i>
+            </span>
+           </span>
+           <span class="expanded-icon-container">
+            <i aria-hidden="true" class="icon fa fa-chevron-down fa-fw">
+            </i>
+           </span>
+           <span class="font-weight-bold ms-1">
+            Личное
+           </span>
+           <small aria-labelledby="view-overview-messages-total-count-label" class="hidden ms-1" data-region="section-total-count-container">
+            (
+            <span aria-hidden="true" data-region="section-total-count">
+            </span>
+            )
+            <span class="sr-only" id="view-overview-messages-total-count-label">
+             Всего бесед:
+            </span>
+           </small>
+           <span class="hidden ms-2" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+           <span aria-labelledby="view-overview-messages-unread-count-label" class="hidden badge rounded-pill bg-primary text-white ms-auto" data-region="section-unread-count-container">
+            <span aria-hidden="true" data-region="section-unread-count">
+            </span>
+            <span class="sr-only" id="view-overview-messages-unread-count-label">
+             Непрочитанных бесед:
+            </span>
+           </span>
+          </button>
+         </div>
+         <div aria-labelledby="view-overview-messages-toggle" aria-live="polite" class="collapse border-bottom lazy-load-list" data-parent="#message-drawer-view-overview-container-6983c4c80e79b6983c4c803f204" data-region="lazy-load-list" data-user-id="30091" id="view-overview-messages-target-6983c4c80e79b6983c4c803f204">
+          <div class="hidden text-center p-2" data-region="empty-message-container">
+           <p class="text-muted mt-2">
+            Нет личных бесед
+           </p>
+          </div>
+          <div class="hidden list-group" data-region="content-container">
+          </div>
+          <div class="list-group" data-region="placeholder-container">
+           <div class="text-center py-2">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </div>
+          </div>
+          <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div aria-hidden="true" class="h-100 hidden" data-messages-offset="0" data-region="view-search" data-user-id="30091" data-users-offset="0" style="overflow-y: auto">
+       <div class="hidden" data-region="search-results-container" style="overflow-y: auto">
+        <div class="d-flex flex-column">
+         <div class="mb-3 bg-white" data-region="all-contacts-container">
+          <div class="pt-2" data-region="contacts-container">
+           <h3 class="h6 px-2">
+            Собеседники
+           </h3>
+           <div class="list-group" data-region="list">
+           </div>
+          </div>
+          <div class="pt-2 border-top" data-region="non-contacts-container">
+           <h3 class="h6 px-2">
+            Собеседники отсутствуют
+           </h3>
+           <div class="list-group" data-region="list">
+           </div>
+          </div>
+          <div class="text-end">
+           <button class="btn btn-link text-primary" data-action="load-more-users">
+            <span data-region="button-text">
+             Загрузить больше
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+              </i>
+             </span>
+            </span>
+           </button>
+          </div>
+         </div>
+         <div class="bg-white" data-region="messages-container">
+          <h3 class="h6 px-2 pt-2">
+           Сообщения
+          </h3>
+          <div class="list-group" data-region="list">
+          </div>
+          <div class="text-end">
+           <button class="btn btn-link text-primary" data-action="load-more-messages">
+            <span data-region="button-text">
+             Загрузить больше
+            </span>
+            <span class="hidden" data-region="loading-icon-container">
+             <span class="loading-icon icon-no-margin">
+              <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+              </i>
+             </span>
+            </span>
+           </button>
+          </div>
+         </div>
+         <p class="hidden p-3 text-center" data-region="no-results-container">
+          Нет результатов
+         </p>
+        </div>
+       </div>
+       <div class="hidden" data-region="loading-placeholder">
+        <div class="text-center pt-3 icon-size-4">
+         <span class="loading-icon icon-no-margin">
+          <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+          </i>
+         </span>
+        </div>
+       </div>
+       <div class="p-3 text-center" data-region="empty-message-container">
+        <p>
+         Поиск пользователей и сообщений
+        </p>
+       </div>
+      </div>
+      <div aria-hidden="true" class="h-100 hidden bg-white" data-region="view-settings">
+       <div class="hidden" data-region="content-container">
+        <div class="p-3" data-region="settings">
+         <h3 class="h6 font-weight-bold">
+          Приватность
+         </h3>
+         <p>
+          Вы можете ограничить круг лиц, которые могут отправлять вам сообщения
+         </p>
+         <div class="mb-3" data-preference="blocknoncontacts">
+          <fieldset>
+           <legend class="sr-only">
+            Принимать сообщения от:
+           </legend>
+           <div class="custom-control custom-radio mb-2">
+            <input class="custom-control-input" id="block-noncontacts-6983c4c80e79b6983c4c803f204-1" name="message_blocknoncontacts" type="radio" value="1"/>
+            <label class="custom-control-label ms-2" for="block-noncontacts-6983c4c80e79b6983c4c803f204-1">
+             Только мои контакты
+            </label>
+           </div>
+           <div class="custom-control custom-radio mb-2">
+            <input class="custom-control-input" id="block-noncontacts-6983c4c80e79b6983c4c803f204-0" name="message_blocknoncontacts" type="radio" value="0"/>
+            <label class="custom-control-label ms-2" for="block-noncontacts-6983c4c80e79b6983c4c803f204-0">
+             Мои собеседники и любой в моих курсах
+            </label>
+           </div>
+          </fieldset>
+         </div>
+         <div class="hidden" data-region="notification-preference-container">
+          <h3 class="mb-2 mt-4 h6 font-weight-bold">
+           Настройки уведомлений
+          </h3>
+         </div>
+         <h3 class="mb-2 mt-4 h6 font-weight-bold">
+          Основные
+         </h3>
+         <div data-preference="entertosend">
+          <div class="custom-control custom-switch">
+           <input checked="" class="custom-control-input" id="enter-to-send-6983c4c80e79b6983c4c803f204" type="checkbox"/>
+           <label class="custom-control-label" for="enter-to-send-6983c4c80e79b6983c4c803f204">
+            Использовать Enter для отправки
+           </label>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div data-region="placeholder-container">
+        <div class="d-flex flex-column p-3">
+         <div class="w-25 bg-pulse-grey h6" style="height: 18px">
+         </div>
+         <div class="w-75 bg-pulse-grey mb-4" style="height: 18px">
+         </div>
+         <div class="mb-3">
+          <div class="w-100 d-flex mb-3">
+           <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px">
+           </div>
+           <div class="bg-pulse-grey w-50 ms-2" style="height: 18px">
+           </div>
+          </div>
+          <div class="w-100 d-flex mb-3">
+           <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px">
+           </div>
+           <div class="bg-pulse-grey w-50 ms-2" style="height: 18px">
+           </div>
+          </div>
+          <div class="w-100 d-flex mb-3">
+           <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px">
+           </div>
+           <div class="bg-pulse-grey w-50 ms-2" style="height: 18px">
+           </div>
+          </div>
+         </div>
+         <div class="w-50 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px">
+         </div>
+         <div class="mb-4">
+          <div class="w-100 d-flex mb-2 align-items-center">
+           <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px">
+           </div>
+           <div class="bg-pulse-grey w-25 ms-2" style="height: 18px">
+           </div>
+          </div>
+          <div class="w-100 d-flex mb-2 align-items-center">
+           <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px">
+           </div>
+           <div class="bg-pulse-grey w-25 ms-2" style="height: 18px">
+           </div>
+          </div>
+         </div>
+         <div class="w-25 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px">
+         </div>
+         <div class="mb-3">
+          <div class="w-100 d-flex mb-2 align-items-center">
+           <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px">
+           </div>
+           <div class="bg-pulse-grey w-50 ms-2" style="height: 18px">
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="footer-container position-relative" data-region="footer-container">
+      <div aria-hidden="true" class="hidden border-top bg-white position-relative" data-enter-to-send="1" data-region="view-conversation">
+       <div class="hidden p-sm-2" data-region="content-messages-footer-container">
+        <div aria-hidden="true" aria-live="polite" class="emoji-auto-complete-container w-100 hidden" data-region="emoji-auto-complete-container">
+        </div>
+        <div class="d-flex mt-sm-1">
+         <textarea aria-label="Напишите сообщение..." class="form-control bg-light" data-auto-rows="" data-max-rows="5" data-min-rows="3" data-region="send-message-txt" dir="auto" maxlength="4096" placeholder="Напишите сообщение..." rows="3" style="resize: none"></textarea>
+         <div class="position-relative d-flex flex-column">
+          <div aria-hidden="true" class="emoji-picker-container hidden" data-region="emoji-picker-container">
+           <div class="card shadow emoji-picker" data-region="emoji-picker">
+            <div class="card-header px-1 pt-1 pb-0 d-flex justify-content-between flex-shrink-0">
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0 selected" data-action="show-category" data-category="Recent" title="Последний">
+              <i aria-hidden="true" class="icon fa-regular fa-clock fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Smileys &amp; Emotion" title="Смайлики и эмоции">
+              <i aria-hidden="true" class="icon fa-regular fa-face-smile fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="People &amp; Body" title="Люди и тело">
+              <i aria-hidden="true" class="icon fa fa-person fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Animals &amp; Nature" title="Животные и природа">
+              <i aria-hidden="true" class="icon fa fa-leaf fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Food &amp; Drink" title="Еда и питьё">
+              <i aria-hidden="true" class="icon fa fa-pizza-slice fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Travel &amp; Places" title="Путешествия и места">
+              <i aria-hidden="true" class="icon fa fa-plane fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Activities" title="Мероприятия">
+              <i aria-hidden="true" class="icon fa fa-futbol fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Objects" title="Предметы">
+              <i aria-hidden="true" class="icon fa fa-hammer fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Symbols" title="Символы">
+              <i aria-hidden="true" class="icon fa fa-peace fa-fw">
+              </i>
+             </button>
+             <button class="btn btn-outline-secondary icon-no-margin category-button rounded-0" data-action="show-category" data-category="Flags" title="Флаги">
+              <i aria-hidden="true" class="icon fa fa-flag fa-fw">
+              </i>
+             </button>
+            </div>
+            <div class="card-body p-2 d-flex flex-column overflow-hidden">
+             <div class="input-group mb-1 flex-shrink-0">
+              <div class="input-group-prepend">
+               <span class="input-group-text pe-0 bg-white text-muted">
+                <i aria-hidden="true" class="icon fa fa-magnifying-glass fa-fw">
+                </i>
+               </span>
+              </div>
+              <input aria-label="Найти" class="form-control border-start-0" data-region="search-input" placeholder="Найти" type="text"/>
+             </div>
+             <div class="flex-grow-1 overflow-auto emojis-container h-100" data-region="emojis-container">
+              <div class="position-relative" data-region="row-container">
+              </div>
+             </div>
+             <div class="flex-grow-1 overflow-auto search-results-container h-100 hidden" data-region="search-results-container">
+              <div class="position-relative" data-region="row-container">
+              </div>
+             </div>
+            </div>
+            <div class="card-footer d-flex flex-shrink-0" data-region="footer">
+             <div class="emoji-preview" data-region="emoji-preview">
+             </div>
+             <div class="emoji-short-name text-muted text-wrap ms-2" data-region="emoji-short-name">
+             </div>
+            </div>
+           </div>
+          </div>
+          <button aria-label="Переключить выбор эмодзи" class="btn btn-link btn-icon icon-size-3 ms-1" data-action="toggle-emoji-picker">
+           <i aria-hidden="true" class="icon fa-regular fa-face-smile fa-fw">
+           </i>
+          </button>
+          <button aria-label="Отправить сообщение" class="btn btn-link btn-icon icon-size-3 ms-1 mt-auto" data-action="send-message">
+           <span data-region="send-icon-container">
+            <i aria-hidden="true" class="icon fa-regular fa-paper-plane fa-fw">
+            </i>
+           </span>
+           <span class="hidden" data-region="loading-icon-container">
+            <span class="loading-icon icon-no-margin">
+             <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+             </i>
+            </span>
+           </span>
+          </button>
+         </div>
+        </div>
+       </div>
+       <div class="hidden p-sm-2" data-region="content-messages-footer-edit-mode-container">
+        <div class="d-flex p-3 justify-content-end">
+         <button class="btn btn-link btn-icon my-1 icon-size-4" data-action="delete-selected-messages" data-placement="top" data-toggle="tooltip" title="Удалить выбранные сообщения">
+          <span data-region="icon-container">
+           <i aria-hidden="true" class="icon fa fa-trash-can fa-fw">
+           </i>
+          </span>
+          <span class="hidden" data-region="loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </span>
+          <span class="sr-only">
+           Удалить выбранные сообщения
+          </span>
+         </button>
+        </div>
+       </div>
+       <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-contact-container">
+        <div class="p-3 bg-white">
+         <p data-region="title">
+         </p>
+         <p class="text-muted" data-region="text">
+         </p>
+         <button class="btn btn-primary btn-block" data-action="request-add-contact" type="button">
+          <span data-region="dialogue-button-text">
+           Отправить запрос на добавление в собеседники
+          </span>
+          <span class="hidden" data-region="loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </span>
+         </button>
+        </div>
+       </div>
+       <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-unblock-container">
+        <div class="p-3 bg-white">
+         <p class="text-muted" data-region="text">
+          Вы заблокировали этого пользователя
+         </p>
+         <button class="btn btn-primary btn-block" data-action="request-unblock" type="button">
+          <span data-region="dialogue-button-text">
+           Разблокировать пользователя
+          </span>
+          <span class="hidden" data-region="loading-icon-container">
+           <span class="loading-icon icon-no-margin">
+            <i aria-label="Загрузка" class="icon fa fa-spinner fa-spin fa-fw" role="img" title="Загрузка">
+            </i>
+           </span>
+          </span>
+         </button>
+        </div>
+       </div>
+       <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-unable-to-message">
+        <div class="p-3 bg-white">
+         <p class="text-muted" data-region="text">
+          Вы не можете отправить сообщение этому пользователю
+         </p>
+        </div>
+       </div>
+       <div class="p-sm-2" data-region="placeholder-container">
+        <div class="d-flex">
+         <div class="bg-pulse-grey w-100" style="height: 80px">
+         </div>
+         <div class="mx-2 mb-2 align-self-end bg-pulse-grey" style="height: 20px; width: 20px">
+         </div>
+        </div>
+       </div>
+       <div class="hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: -1px; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);">
+       </div>
+      </div>
+      <div class="text-center" data-region="view-overview">
+       <a href="https://lms.bsuir.by/message/index.php">
+        Смотреть все
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

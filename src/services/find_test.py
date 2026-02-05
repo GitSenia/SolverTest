@@ -6,10 +6,12 @@ import logging
 from requests import Session
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+from typing import Dict,Tuple
 import os
 
 from src.bot_tg import config as c
 import re
+
 
 
 
@@ -26,7 +28,7 @@ load_dotenv()
 
 
 # Пример использования
-def test_find(user_name:str, password:str):
+def test_find(user_name:str, password:str) ->Dict[Tuple[str, str], Dict[str, str]]:
     tests_for_curs={}
     session = Session()
     str = session.post(c.url_login, data={'username':user_name, 'password': password}, allow_redirects=True)
@@ -39,8 +41,10 @@ def test_find(user_name:str, password:str):
         get_link = session.get(link)
         lxml_link = BeautifulSoup(get_link.text, 'lxml')
         name = lxml_link.find("div", class_="page-header-headings").text.strip("\n")
+        logging.info(name)
         link_quiz = lxml_link.find_all("li", class_="quiz")
         if not link_quiz:
+            logging.info("no quiz link")
             continue
 
         curs={}
@@ -57,7 +61,7 @@ def test_find(user_name:str, password:str):
         name_of_teacher = key.split()[-1]
         key = key.replace("(ДН)", "").replace(name_of_teacher, "")
 
-        for i in key.split('.', 1)[0].split():
+        for i in key.split():
             name_for_subject += i[0].upper()
 
         tests_for_curs_pars[(name_for_subject,name_of_teacher)] = values
